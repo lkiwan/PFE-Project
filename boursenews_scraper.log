@@ -1,0 +1,12 @@
+2026-03-10 23:37:09,985 - INFO - ====== WebDriver manager ======
+2026-03-10 23:37:11,936 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:37:11,941 - ERROR - Scraping failed: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Program Files\PostgreSQL\18\ssl\certs\ca-bundle.crt
+2026-03-10 23:38:13,690 - INFO - ====== WebDriver manager ======
+2026-03-10 23:38:30,134 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:38:32,792 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:38:33,650 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 23:38:41,230 - ERROR - Scraping failed: name 'save_articles_todb' is not defined
+2026-03-10 23:39:01,323 - INFO - ====== WebDriver manager ======
+2026-03-10 23:39:02,649 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:39:06,958 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:39:08,486 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache

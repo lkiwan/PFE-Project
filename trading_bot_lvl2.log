@@ -1,0 +1,3679 @@
+2026-03-10 14:41:08,354 - INFO - Level 2 service started
+2026-03-10 14:41:08,354 - INFO - ====== WebDriver manager ======
+2026-03-10 14:44:56,131 - INFO - Level 2 service started
+2026-03-10 14:44:56,131 - INFO - ====== WebDriver manager ======
+2026-03-10 14:44:57,637 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:44:58,276 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:44:59,010 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:45:00,660 - INFO - Level 2: starting iteration
+2026-03-10 14:45:06,163 - ERROR - Level 2 error for IAM: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 1, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 6, 153953), 'bid_price': 92.5, 'bid_qty': 250.0, 'ask_price': 93.9, 'ask_qty': 500.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 1, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 6, 153953), 'bid_price': 92.5, 'bid_qty': 250.0, 'ask_price': 93.9, 'ask_qty': 500.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 14:45:09,314 - ERROR - Level 2 error for ATW: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 4, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 9, 312465), 'bid_price': 690.0, 'bid_qty': 238.0, 'ask_price': 700.0, 'ask_qty': 15.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 4, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 9, 312465), 'bid_price': 690.0, 'bid_qty': 238.0, 'ask_price': 700.0, 'ask_qty': 15.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:45:12,317 - ERROR - Level 2 error for CIH: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 9, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 12, 315265), 'bid_price': 362.0, 'bid_qty': 174.0, 'ask_price': 380.0, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 9, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 12, 315265), 'bid_price': 362.0, 'bid_qty': 174.0, 'ask_price': 380.0, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:45:15,280 - ERROR - Level 2 error for AKDITAL: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 15, 278529), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 15, 278529), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:45:18,917 - ERROR - Level 2 error for ALLIANCES: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 18, 915946), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 18, 915946), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:45:21,831 - ERROR - Level 2 error for JET CONTRACTORS: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 13, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 21, 829376), 'bid_price': 2090.0, 'bid_qty': 50.0, 'ask_price': 2185.0, 'ask_qty': 5.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 13, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 21, 829376), 'bid_price': 2090.0, 'bid_qty': 50.0, 'ask_price': 2185.0, 'ask_qty': 5.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:45:24,635 - WARNING - Level 2: empty order book for SGTM
+2026-03-10 14:45:27,144 - WARNING - Level 2: empty order book for SODEP
+2026-03-10 14:45:29,797 - ERROR - Level 2 error for TAQA: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 16, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 29, 796145), 'bid_price': 1800.0, 'bid_qty': 7.0, 'ask_price': 1819.0, 'ask_qty': 255.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 16, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 45, 29, 796145), 'bid_price': 1800.0, 'bid_qty': 7.0, 'ask_price': 1819.0, 'ask_qty': 255.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:45:32,781 - WARNING - Level 2: empty order book for TGCC
+2026-03-10 14:45:35,713 - WARNING - Level 2: empty order book for ADDOUHA
+2026-03-10 14:50:35,715 - INFO - Level 2: starting iteration
+2026-03-10 14:50:39,036 - ERROR - Level 2 error for IAM: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 1, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 39, 33860), 'bid_price': 92.5, 'bid_qty': 250.0, 'ask_price': 93.9, 'ask_qty': 500.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 1, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 39, 33860), 'bid_price': 92.5, 'bid_qty': 250.0, 'ask_price': 93.9, 'ask_qty': 500.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 14:50:41,718 - ERROR - Level 2 error for ATW: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 4, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 41, 716238), 'bid_price': 690.0, 'bid_qty': 238.0, 'ask_price': 700.0, 'ask_qty': 15.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 4, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 41, 716238), 'bid_price': 690.0, 'bid_qty': 238.0, 'ask_price': 700.0, 'ask_qty': 15.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:50:44,317 - ERROR - Level 2 error for CIH: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 9, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 44, 315703), 'bid_price': 362.0, 'bid_qty': 174.0, 'ask_price': 380.0, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 9, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 44, 315703), 'bid_price': 362.0, 'bid_qty': 174.0, 'ask_price': 380.0, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:50:47,057 - ERROR - Level 2 error for AKDITAL: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 47, 55837), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 47, 55837), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:50:49,871 - ERROR - Level 2 error for ALLIANCES: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 49, 871141), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 49, 871141), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:50:52,798 - ERROR - Level 2 error for JET CONTRACTORS: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 13, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 52, 796555), 'bid_price': 2090.0, 'bid_qty': 50.0, 'ask_price': 2185.0, 'ask_qty': 5.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 13, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 50, 52, 796555), 'bid_price': 2090.0, 'bid_qty': 50.0, 'ask_price': 2185.0, 'ask_qty': 5.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:50:55,632 - WARNING - Level 2: empty order book for SGTM
+2026-03-10 14:50:58,596 - WARNING - Level 2: empty order book for SODEP
+2026-03-10 14:51:01,746 - ERROR - Level 2 error for TAQA: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 16, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 51, 1, 744386), 'bid_price': 1800.0, 'bid_qty': 7.0, 'ask_price': 1819.0, 'ask_qty': 255.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 16, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 51, 1, 744386), 'bid_price': 1800.0, 'bid_qty': 7.0, 'ask_price': 1819.0, 'ask_qty': 255.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:51:04,167 - WARNING - Level 2: empty order book for TGCC
+2026-03-10 14:51:07,551 - WARNING - Level 2: empty order book for ADDOUHA
+2026-03-10 14:56:07,553 - INFO - Level 2: starting iteration
+2026-03-10 14:56:10,768 - ERROR - Level 2 error for IAM: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 1, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 10, 767473), 'bid_price': 92.5, 'bid_qty': 250.0, 'ask_price': 93.9, 'ask_qty': 500.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 1, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 10, 767473), 'bid_price': 92.5, 'bid_qty': 250.0, 'ask_price': 93.9, 'ask_qty': 500.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 14:56:13,410 - ERROR - Level 2 error for ATW: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 4, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 13, 408787), 'bid_price': 690.0, 'bid_qty': 238.0, 'ask_price': 700.0, 'ask_qty': 15.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 4, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 13, 408787), 'bid_price': 690.0, 'bid_qty': 238.0, 'ask_price': 700.0, 'ask_qty': 15.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:56:16,321 - ERROR - Level 2 error for CIH: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 9, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 16, 319369), 'bid_price': 362.0, 'bid_qty': 174.0, 'ask_price': 380.0, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 9, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 16, 319369), 'bid_price': 362.0, 'bid_qty': 174.0, 'ask_price': 380.0, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:56:19,072 - ERROR - Level 2 error for AKDITAL: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 19, 70604), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 19, 70604), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:56:22,343 - ERROR - Level 2 error for ALLIANCES: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 22, 341358), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 22, 341358), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:56:25,125 - ERROR - Level 2 error for JET CONTRACTORS: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 13, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 25, 123521), 'bid_price': 2090.0, 'bid_qty': 50.0, 'ask_price': 2185.0, 'ask_qty': 5.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 13, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 25, 123521), 'bid_price': 2090.0, 'bid_qty': 50.0, 'ask_price': 2185.0, 'ask_qty': 5.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:56:28,250 - WARNING - Level 2: empty order book for SGTM
+2026-03-10 14:56:30,930 - WARNING - Level 2: empty order book for SODEP
+2026-03-10 14:56:33,751 - ERROR - Level 2 error for TAQA: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 16, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 33, 749518), 'bid_price': 1800.0, 'bid_qty': 7.0, 'ask_price': 1819.0, 'ask_qty': 255.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 16, 'snapshot_time': datetime.datetime(2026, 3, 10, 14, 56, 33, 749518), 'bid_price': 1800.0, 'bid_qty': 7.0, 'ask_price': 1819.0, 'ask_qty': 255.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 14:56:37,315 - WARNING - Level 2: empty order book for TGCC
+2026-03-10 14:56:40,305 - WARNING - Level 2: empty order book for ADDOUHA
+2026-03-10 15:01:40,307 - INFO - Level 2: starting iteration
+2026-03-10 15:01:43,238 - ERROR - Level 2 error for IAM: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 1, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 43, 235501), 'bid_price': 92.5, 'bid_qty': 250.0, 'ask_price': 93.9, 'ask_qty': 500.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 1, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 43, 235501), 'bid_price': 92.5, 'bid_qty': 250.0, 'ask_price': 93.9, 'ask_qty': 500.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 15:01:46,099 - ERROR - Level 2 error for ATW: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 4, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 46, 97111), 'bid_price': 690.0, 'bid_qty': 238.0, 'ask_price': 700.0, 'ask_qty': 15.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 4, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 46, 97111), 'bid_price': 690.0, 'bid_qty': 238.0, 'ask_price': 700.0, 'ask_qty': 15.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 15:01:48,788 - ERROR - Level 2 error for CIH: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 9, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 48, 787319), 'bid_price': 362.0, 'bid_qty': 174.0, 'ask_price': 380.0, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 9, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 48, 787319), 'bid_price': 362.0, 'bid_qty': 174.0, 'ask_price': 380.0, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 15:01:51,327 - ERROR - Level 2 error for AKDITAL: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 51, 326506), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 51, 326506), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 15:01:54,318 - ERROR - Level 2 error for ALLIANCES: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 54, 317218), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 54, 317218), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 15:01:57,147 - ERROR - Level 2 error for JET CONTRACTORS: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 13, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 57, 145734), 'bid_price': 2090.0, 'bid_qty': 50.0, 'ask_price': 2185.0, 'ask_qty': 5.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 13, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 1, 57, 145734), 'bid_price': 2090.0, 'bid_qty': 50.0, 'ask_price': 2185.0, 'ask_qty': 5.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 15:02:00,157 - WARNING - Level 2: empty order book for SGTM
+2026-03-10 15:02:02,931 - WARNING - Level 2: empty order book for SODEP
+2026-03-10 15:02:05,548 - ERROR - Level 2 error for TAQA: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 16, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 2, 5, 546805), 'bid_price': 1800.0, 'bid_qty': 7.0, 'ask_price': 1819.0, 'ask_qty': 255.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 277, in scrape_iteration
+    insert_order_book_row(conn, payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level2.py", line 188, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 16, 'snapshot_time': datetime.datetime(2026, 3, 10, 15, 2, 5, 546805), 'bid_price': 1800.0, 'bid_qty': 7.0, 'ask_price': 1819.0, 'ask_qty': 255.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 15:02:09,148 - WARNING - Level 2: empty order book for TGCC
+2026-03-10 15:02:12,342 - WARNING - Level 2: empty order book for ADDOUHA

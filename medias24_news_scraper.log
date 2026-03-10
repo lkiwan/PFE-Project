@@ -1,0 +1,6 @@
+2026-03-10 23:48:46,692 - INFO - ====== WebDriver manager ======
+2026-03-10 23:48:52,732 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:48:54,613 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:48:56,711 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 23:52:53,079 - ERROR - Page 31 error: HTTPConnectionPool(host='localhost', port=61398): Read timed out. (read timeout=120)
+2026-03-10 23:54:53,096 - ERROR - Page 32 error: HTTPConnectionPool(host='localhost', port=61398): Read timed out. (read timeout=120)

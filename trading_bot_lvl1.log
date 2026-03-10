@@ -1,0 +1,1160 @@
+2026-03-08 02:23:25,009 - INFO - \U0001f634 La bourse est fermée (Week-end ou hors horaires d'ouverture).
+2026-03-08 02:24:17,458 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-08 02:26:14,059 - INFO - \U0001f634 La bourse est fermée (Week-end ou hors horaires d'ouverture).
+2026-03-08 02:27:01,833 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-08 02:27:41,878 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-08 02:27:43,813 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-08 02:27:43,814 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-08 22:18:38,020 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-08 22:18:39,728 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-08 22:18:39,728 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:10:02,459 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:11:40,116 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:12:37,478 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:12:43,261 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:13:36,077 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:14:22,803 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:15:43,110 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:15:49,511 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:16:50,239 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:16:50,239 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:16:51,240 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:17:05,184 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:19:04,235 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:07,623 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:07,623 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:08,624 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:09,750 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:09,750 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:10,750 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:21,944 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:21,944 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:22,944 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:24,048 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:24,048 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:25,049 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:26,572 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:26,572 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:27,573 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:28,785 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:28,785 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:29,786 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:31,121 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:31,121 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:32,122 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:33,298 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:33,298 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:34,299 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:35,684 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:35,684 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:36,685 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:37,784 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:37,784 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:38,785 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:39,977 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:39,977 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:40,978 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:41,990 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:41,990 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:42,991 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:55,520 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:55,520 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:56,521 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:57,492 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:57,492 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:19:58,493 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:19:59,624 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:19:59,624 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:00,625 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:01,941 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:01,941 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:02,942 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:13,659 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:13,659 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:14,659 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:15,802 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:15,802 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:16,803 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:18,111 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:18,111 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:19,112 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:20,172 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:20,172 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:21,173 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:22,622 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:22,622 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:23,623 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:24,852 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:24,853 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:25,853 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:27,729 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:27,729 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:28,730 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:29,825 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:29,825 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:30,826 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:31,970 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:31,970 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:32,971 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:34,120 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:34,120 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:35,121 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:37,359 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:37,360 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:38,361 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:42,929 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:42,929 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:43,930 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:45,281 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:45,281 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:46,282 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:47,536 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:47,537 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:48,537 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:49,663 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:49,663 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:50,663 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:51,910 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:51,910 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:52,911 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:54,690 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:54,690 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:55,691 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:57,125 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:57,125 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:20:58,126 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:20:59,141 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:20:59,141 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:00,141 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:01,351 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:01,351 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:02,351 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:03,527 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:03,527 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:04,528 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:05,565 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:05,565 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:06,566 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:07,881 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:07,881 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:08,882 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:10,015 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:10,015 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:11,016 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:13,222 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:13,222 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:14,223 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:21,999 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:21,999 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:22,999 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:37,532 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:37,532 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:38,533 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:41,604 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:41,604 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:42,605 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:45,684 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:45,685 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:46,686 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:48,009 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:48,009 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:49,010 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:21:50,682 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:21:50,682 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:21:51,683 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:08,672 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:08,672 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:09,672 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:12,185 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:12,185 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:13,186 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:15,887 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:15,887 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:16,888 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:18,044 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:18,044 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:19,045 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:20,520 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:20,520 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:21,521 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:23,882 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:23,882 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:24,884 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:26,232 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:26,232 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:27,233 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:28,508 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:28,509 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:29,509 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:31,667 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:31,667 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:32,667 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:33,670 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:33,670 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:34,670 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:36,523 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:36,523 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:37,524 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:38,645 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:38,645 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:39,646 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:40,726 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:40,726 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:41,727 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:42,825 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:42,825 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:43,826 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:44,706 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:44,706 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:45,707 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:47,719 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:47,719 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:48,720 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:50,863 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:50,863 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:51,864 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:52,895 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:52,895 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:53,896 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:22:54,998 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:22:54,998 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:22:55,999 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:07,227 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:07,227 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:08,228 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:09,656 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:09,656 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:10,657 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:11,826 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:11,827 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:12,827 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:13,885 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:13,885 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:14,886 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:15,958 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:15,958 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:16,959 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:18,168 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:18,169 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:19,170 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:20,123 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:20,123 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:21,123 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:22,174 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:22,174 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:23,175 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:24,332 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:24,332 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:25,332 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:26,389 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:26,389 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:27,389 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:37,007 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:37,007 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:38,007 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:39,211 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:39,211 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:40,212 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:41,589 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:41,589 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:42,590 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:46,318 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:46,318 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:47,319 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:53,353 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:53,353 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:54,354 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:23:57,962 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:23:57,962 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:23:58,962 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:00,084 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:00,084 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:01,085 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:02,024 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:02,025 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:03,025 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:04,138 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:04,138 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:05,139 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:06,420 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:06,420 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:07,420 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:08,803 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:08,803 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:09,804 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:10,709 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:10,709 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:11,710 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:13,040 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:13,040 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:14,041 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:15,154 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:15,154 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:16,154 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:17,376 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:17,376 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:18,377 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:24:20,182 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:24:20,182 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:24:21,178 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:26:40,188 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:41,843 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:41,843 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:42,844 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:43,892 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:43,892 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:44,893 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:46,107 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:46,107 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:47,109 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:48,208 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:48,208 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:49,209 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:50,220 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:50,220 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:51,221 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:52,162 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:52,162 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:53,163 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:54,327 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:54,328 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:55,329 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:56,415 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:56,415 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:57,416 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:26:58,276 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:26:58,276 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:26:59,277 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:27:00,624 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:27:00,624 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:27:01,625 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:27:11,747 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:27:11,747 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:27:12,748 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:27:14,217 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:27:14,217 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:27:15,218 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:27:16,775 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:27:16,775 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:27:17,776 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:27:19,155 - INFO - \u2705 Level 1 récupéré. 1 lignes trouvées avant filtrage.
+2026-03-09 12:27:19,155 - INFO - \u2705 Level 1 scraped successfully. To insert, uncomment SQL logic after verifying DataFrame columns.
+2026-03-09 12:27:20,156 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data)...
+2026-03-09 12:27:21,543 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:36:31,702 - INFO - \U0001f680 Démarrage du Level 1 Scraper (EOD - End of Day).
+2026-03-09 12:36:31,702 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data) via Selenium...
+2026-03-09 12:36:32,314 - INFO - ====== WebDriver manager ======
+2026-03-09 12:36:33,873 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:36:34,639 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:36:35,342 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:36:36,765 - INFO - WebDriver version 145.0.7632.117 selected
+2026-03-09 12:36:36,773 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-09 12:36:36,774 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-09 12:36:37,465 - INFO - Driver downloading response is 200
+2026-03-09 12:36:58,301 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:36:59,501 - INFO - Driver has been saved in cache [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117]
+2026-03-09 12:38:17,014 - INFO - \u2705 Level 1 récupéré via Selenium. 1 lignes trouvées avant filtrage.
+2026-03-09 12:38:17,015 - INFO - \u2705 Après filtrage: 1 lignes correspondant à TARGET_STOCKS.
+2026-03-09 12:38:17,171 - INFO - \u2705 1 lignes insérées dans md_eod_bars avec succès.
+2026-03-09 12:41:53,327 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:42:10,723 - INFO - \U0001f680 Démarrage du Level 1 Scraper (EOD - End of Day).
+2026-03-09 12:42:10,723 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data) via Selenium...
+2026-03-09 12:42:11,190 - INFO - ====== WebDriver manager ======
+2026-03-09 12:42:12,858 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:42:13,545 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:42:14,741 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 12:42:22,949 - INFO - \u2705 Level 1 récupéré via Selenium. 1 lignes trouvées avant filtrage.
+2026-03-09 12:42:22,950 - INFO - \u2705 Après filtrage: 1 lignes correspondant à TARGET_STOCKS.
+2026-03-09 12:42:23,051 - INFO - \u2705 1 lignes insérées dans md_eod_bars avec succès.
+2026-03-09 12:53:38,909 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:55:13,259 - INFO - \U0001f680 Démarrage du Level 1 Scraper (EOD - End of Day).
+2026-03-09 12:55:13,260 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data) via Selenium...
+2026-03-09 12:55:13,790 - INFO - ====== WebDriver manager ======
+2026-03-09 12:55:15,623 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:55:16,285 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:55:16,980 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 12:55:23,082 - INFO - \u2705 Level 1 récupéré via Selenium. 80 lignes trouvées avant filtrage.
+2026-03-09 12:55:23,085 - INFO - \u2705 Après filtrage: 11 lignes correspondant à TARGET_STOCKS.
+2026-03-09 12:55:23,339 - INFO - \u2705 11 lignes insérées dans md_eod_bars avec succès.
+2026-03-09 12:55:44,876 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 12:56:56,644 - INFO - \U0001f680 Démarrage du Level 1 Scraper (EOD - End of Day).
+2026-03-09 12:56:56,644 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data) via Selenium...
+2026-03-09 12:56:57,089 - INFO - ====== WebDriver manager ======
+2026-03-09 12:56:59,138 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:56:59,780 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 12:57:00,505 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 12:57:07,358 - INFO - \u2705 Level 1 récupéré via Selenium. 80 lignes trouvées avant filtrage.
+2026-03-09 12:57:07,360 - INFO - \u2705 Après filtrage: 11 lignes correspondant à TARGET_STOCKS.
+2026-03-09 12:57:07,576 - INFO - \u2705 11 lignes insérées dans md_eod_bars avec succès.
+2026-03-09 13:01:53,786 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:07:56,377 - INFO - \U0001f680 Démarrage du Level 1 Scraper (EOD - End of Day).
+2026-03-09 13:07:56,378 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data) via Selenium...
+2026-03-09 13:07:56,848 - INFO - ====== WebDriver manager ======
+2026-03-09 13:07:58,121 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:07:59,115 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:08:00,133 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:08:07,541 - INFO - \u2705 Level 1 récupéré via Selenium. 80 lignes trouvées avant filtrage.
+2026-03-09 13:08:07,542 - INFO - \u2705 Après filtrage: 11 lignes correspondant à TARGET_STOCKS.
+2026-03-09 13:08:07,645 - INFO - \u2705 11 lignes insérées dans md_eod_bars avec succès.
+2026-03-09 13:08:09,909 - INFO - \U0001f680 Démarrage du Level 1 Scraper (EOD - End of Day).
+2026-03-09 13:08:09,909 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data) via Selenium...
+2026-03-09 13:08:10,359 - INFO - ====== WebDriver manager ======
+2026-03-09 13:08:11,641 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:08:12,767 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:08:13,479 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:08:18,308 - INFO - \u2705 Level 1 récupéré via Selenium. 80 lignes trouvées avant filtrage.
+2026-03-09 13:08:18,310 - INFO - \u2705 Après filtrage: 11 lignes correspondant à TARGET_STOCKS.
+2026-03-09 13:08:18,405 - ERROR - \u274c Level 1 Error: (psycopg2.errors.UniqueViolation) ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « eod_bars_valeur_name_trade_date_key »
+DETAIL:  La clé « (valeur_name, trade_date)=(TAQA, 2026-03-09) » existe déjà.
+
+[SQL: INSERT INTO md.eod_bars (valeur_name, trade_date, cours_ouverture, cours_close, cours_plus_haut, cours_plus_bas, cours_reference, variation_pct, volume_titres, nombre_transactions, capitalisation, best_bid_qty, best_ask_qty, best_bid_price, best_ask_ ... 4052 characters truncated ... t_ask_qty__10)s, %(best_bid_price__10)s, %(best_ask_price__10)s, %(statut__10)s, %(volume_mad__10)s)]
+[parameters: {'cours_plus_bas__0': None, 'best_ask_qty__0': None, 'volume_mad__0': 690992.0, 'valeur_name__0': 'TAQA', 'statut__0': 'T', 'trade_date__0': datetime.date(2026, 3, 9), 'cours_plus_haut__0': None, 'best_ask_price__0': None, 'best_bid_price__0': None, 'nombre_transactions__0': None, 'cours_reference__0': 1800.0, 'best_bid_qty__0': None, 'variation_pct__0': 0.0, 'volume_titres__0': 384, 'capitalisation__0': None, 'cours_ouverture__0': 1810.0, 'cours_close__0': 1797.0, 'cours_plus_bas__1': None, 'best_ask_qty__1': None, 'volume_mad__1': 8080805.1, 'valeur_name__1': 'SODEP', 'statut__1': 'T', 'trade_date__1': datetime.date(2026, 3, 9), 'cours_plus_haut__1': None, 'best_ask_price__1': None, 'best_bid_price__1': None, 'nombre_transactions__1': None, 'cours_reference__1': 760.0, 'best_bid_qty__1': None, 'variation_pct__1': 0.0, 'volume_titres__1': 10743, 'capitalisation__1': None, 'cours_ouverture__1': 760.0, 'cours_close__1': 748.8, 'cours_plus_bas__2': None, 'best_ask_qty__2': None, 'volume_mad__2': 6932203.0, 'valeur_name__2': 'JET CONTRACTORS', 'statut__2': 'T', 'trade_date__2': datetime.date(2026, 3, 9), 'cours_plus_haut__2': None, 'best_ask_price__2': None, 'best_bid_price__2': None, 'nombre_transactions__2': None, 'cours_reference__2': 2190.0, 'best_bid_qty__2': None, 'variation_pct__2': 0.0, 'volume_titres__2': 3429, 'capitalisation__2': None, 'cours_ouverture__2': 2020.0 ... 87 parameters truncated ... 'best_ask_qty__8': None, 'volume_mad__8': 7813220.0, 'valeur_name__8': 'ADDOUHA', 'statut__8': 'T', 'trade_date__8': datetime.date(2026, 3, 9), 'cours_plus_haut__8': None, 'best_ask_price__8': None, 'best_bid_price__8': None, 'nombre_transactions__8': None, 'cours_reference__8': 30.0, 'best_bid_qty__8': None, 'variation_pct__8': 0.0, 'volume_titres__8': 273039, 'capitalisation__8': None, 'cours_ouverture__8': 28.98, 'cours_close__8': 28.99, 'cours_plus_bas__9': None, 'best_ask_qty__9': None, 'volume_mad__9': 3985169.92, 'valeur_name__9': 'IAM', 'statut__9': 'T', 'trade_date__9': datetime.date(2026, 3, 9), 'cours_plus_haut__9': None, 'best_ask_price__9': None, 'best_bid_price__9': None, 'nombre_transactions__9': None, 'cours_reference__9': 92.51, 'best_bid_qty__9': None, 'variation_pct__9': 0.0, 'volume_titres__9': 43439, 'capitalisation__9': None, 'cours_ouverture__9': 92.0, 'cours_close__9': 91.6, 'cours_plus_bas__10': None, 'best_ask_qty__10': None, 'volume_mad__10': 24076966.0, 'valeur_name__10': 'AKDITAL', 'statut__10': 'T', 'trade_date__10': datetime.date(2026, 3, 9), 'cours_plus_haut__10': None, 'best_ask_price__10': None, 'best_bid_price__10': None, 'nombre_transactions__10': None, 'cours_reference__10': 1065.0, 'best_bid_qty__10': None, 'variation_pct__10': 0.0, 'volume_titres__10': 23835, 'capitalisation__10': None, 'cours_ouverture__10': 1001.0, 'cours_close__10': 1024.0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « eod_bars_valeur_name_trade_date_key »
+DETAIL:  La clé « (valeur_name, trade_date)=(TAQA, 2026-03-09) » existe déjà.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level1.py", line 185, in scrape_level_1
+    df.to_sql(
+    ~~~~~~~~~^
+        'eod_bars',
+        ^^^^^^^^^^^
+    ...<3 lines>...
+        index=False
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3109, in to_sql
+    return sql.to_sql(
+           ~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<8 lines>...
+        method=method,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+           ~~~~~~~~~~~~~~~~~^
+        frame,
+        ^^^^^^
+    ...<9 lines>...
+        **engine_kwargs,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 2030, in to_sql
+    total_inserted = sql_engine.insert_records(
+        table=table,
+    ...<7 lines>...
+        **engine_kwargs,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1579, in insert_records
+    raise err
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1570, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1121, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1012, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1838, in _execute_context
+    return self._exec_insertmany_context(dialect, context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e,
+        ^^
+    ...<4 lines>...
+        is_sub_exec=True,
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « eod_bars_valeur_name_trade_date_key »
+DETAIL:  La clé « (valeur_name, trade_date)=(TAQA, 2026-03-09) » existe déjà.
+
+[SQL: INSERT INTO md.eod_bars (valeur_name, trade_date, cours_ouverture, cours_close, cours_plus_haut, cours_plus_bas, cours_reference, variation_pct, volume_titres, nombre_transactions, capitalisation, best_bid_qty, best_ask_qty, best_bid_price, best_ask_ ... 4052 characters truncated ... t_ask_qty__10)s, %(best_bid_price__10)s, %(best_ask_price__10)s, %(statut__10)s, %(volume_mad__10)s)]
+[parameters: {'cours_plus_bas__0': None, 'best_ask_qty__0': None, 'volume_mad__0': 690992.0, 'valeur_name__0': 'TAQA', 'statut__0': 'T', 'trade_date__0': datetime.date(2026, 3, 9), 'cours_plus_haut__0': None, 'best_ask_price__0': None, 'best_bid_price__0': None, 'nombre_transactions__0': None, 'cours_reference__0': 1800.0, 'best_bid_qty__0': None, 'variation_pct__0': 0.0, 'volume_titres__0': 384, 'capitalisation__0': None, 'cours_ouverture__0': 1810.0, 'cours_close__0': 1797.0, 'cours_plus_bas__1': None, 'best_ask_qty__1': None, 'volume_mad__1': 8080805.1, 'valeur_name__1': 'SODEP', 'statut__1': 'T', 'trade_date__1': datetime.date(2026, 3, 9), 'cours_plus_haut__1': None, 'best_ask_price__1': None, 'best_bid_price__1': None, 'nombre_transactions__1': None, 'cours_reference__1': 760.0, 'best_bid_qty__1': None, 'variation_pct__1': 0.0, 'volume_titres__1': 10743, 'capitalisation__1': None, 'cours_ouverture__1': 760.0, 'cours_close__1': 748.8, 'cours_plus_bas__2': None, 'best_ask_qty__2': None, 'volume_mad__2': 6932203.0, 'valeur_name__2': 'JET CONTRACTORS', 'statut__2': 'T', 'trade_date__2': datetime.date(2026, 3, 9), 'cours_plus_haut__2': None, 'best_ask_price__2': None, 'best_bid_price__2': None, 'nombre_transactions__2': None, 'cours_reference__2': 2190.0, 'best_bid_qty__2': None, 'variation_pct__2': 0.0, 'volume_titres__2': 3429, 'capitalisation__2': None, 'cours_ouverture__2': 2020.0 ... 87 parameters truncated ... 'best_ask_qty__8': None, 'volume_mad__8': 7813220.0, 'valeur_name__8': 'ADDOUHA', 'statut__8': 'T', 'trade_date__8': datetime.date(2026, 3, 9), 'cours_plus_haut__8': None, 'best_ask_price__8': None, 'best_bid_price__8': None, 'nombre_transactions__8': None, 'cours_reference__8': 30.0, 'best_bid_qty__8': None, 'variation_pct__8': 0.0, 'volume_titres__8': 273039, 'capitalisation__8': None, 'cours_ouverture__8': 28.98, 'cours_close__8': 28.99, 'cours_plus_bas__9': None, 'best_ask_qty__9': None, 'volume_mad__9': 3985169.92, 'valeur_name__9': 'IAM', 'statut__9': 'T', 'trade_date__9': datetime.date(2026, 3, 9), 'cours_plus_haut__9': None, 'best_ask_price__9': None, 'best_bid_price__9': None, 'nombre_transactions__9': None, 'cours_reference__9': 92.51, 'best_bid_qty__9': None, 'variation_pct__9': 0.0, 'volume_titres__9': 43439, 'capitalisation__9': None, 'cours_ouverture__9': 92.0, 'cours_close__9': 91.6, 'cours_plus_bas__10': None, 'best_ask_qty__10': None, 'volume_mad__10': 24076966.0, 'valeur_name__10': 'AKDITAL', 'statut__10': 'T', 'trade_date__10': datetime.date(2026, 3, 9), 'cours_plus_haut__10': None, 'best_ask_price__10': None, 'best_bid_price__10': None, 'nombre_transactions__10': None, 'cours_reference__10': 1065.0, 'best_bid_qty__10': None, 'variation_pct__10': 0.0, 'volume_titres__10': 23835, 'capitalisation__10': None, 'cours_ouverture__10': 1001.0, 'cours_close__10': 1024.0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-03-09 13:08:37,919 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:08:51,228 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:08:58,874 - INFO - \U0001f680 Démarrage du Level 1 Scraper (EOD - End of Day).
+2026-03-09 13:08:58,874 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data) via Selenium...
+2026-03-09 13:08:59,377 - INFO - ====== WebDriver manager ======
+2026-03-09 13:09:00,963 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:09:02,041 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:09:03,021 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:09:07,256 - INFO - \u2705 Level 1 récupéré via Selenium. 80 lignes trouvées avant filtrage.
+2026-03-09 13:09:07,258 - INFO - \u2705 Après filtrage: 11 lignes correspondant à TARGET_STOCKS.
+2026-03-09 13:09:07,377 - ERROR - \u274c Level 1 Error: (psycopg2.errors.UniqueViolation) ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « eod_bars_valeur_name_trade_date_key »
+DETAIL:  La clé « (valeur_name, trade_date)=(TAQA, 2026-03-09) » existe déjà.
+
+[SQL: INSERT INTO md.eod_bars (valeur_name, trade_date, cours_ouverture, cours_close, cours_plus_haut, cours_plus_bas, cours_reference, variation_pct, volume_titres, nombre_transactions, capitalisation, best_bid_qty, best_ask_qty, best_bid_price, best_ask_ ... 4052 characters truncated ... t_ask_qty__10)s, %(best_bid_price__10)s, %(best_ask_price__10)s, %(statut__10)s, %(volume_mad__10)s)]
+[parameters: {'best_bid_price__0': None, 'best_ask_price__0': None, 'volume_titres__0': 384, 'cours_close__0': 1797.0, 'volume_mad__0': 690992.0, 'trade_date__0': datetime.date(2026, 3, 9), 'cours_reference__0': 1800.0, 'variation_pct__0': 0.0, 'best_bid_qty__0': None, 'cours_plus_haut__0': None, 'statut__0': 'T', 'best_ask_qty__0': None, 'nombre_transactions__0': None, 'cours_ouverture__0': 1810.0, 'valeur_name__0': 'TAQA', 'capitalisation__0': None, 'cours_plus_bas__0': None, 'best_bid_price__1': None, 'best_ask_price__1': None, 'volume_titres__1': 10743, 'cours_close__1': 748.8, 'volume_mad__1': 8080805.1, 'trade_date__1': datetime.date(2026, 3, 9), 'cours_reference__1': 760.0, 'variation_pct__1': 0.0, 'best_bid_qty__1': None, 'cours_plus_haut__1': None, 'statut__1': 'T', 'best_ask_qty__1': None, 'nombre_transactions__1': None, 'cours_ouverture__1': 760.0, 'valeur_name__1': 'SODEP', 'capitalisation__1': None, 'cours_plus_bas__1': None, 'best_bid_price__2': None, 'best_ask_price__2': None, 'volume_titres__2': 3434, 'cours_close__2': 2020.0, 'volume_mad__2': 6942303.0, 'trade_date__2': datetime.date(2026, 3, 9), 'cours_reference__2': 2190.0, 'variation_pct__2': 0.0, 'best_bid_qty__2': None, 'cours_plus_haut__2': None, 'statut__2': 'T', 'best_ask_qty__2': None, 'nombre_transactions__2': None, 'cours_ouverture__2': 2020.0, 'valeur_name__2': 'JET CONTRACTORS', 'capitalisation__2': None ... 87 parameters truncated ... 'best_ask_price__8': None, 'volume_titres__8': 273039, 'cours_close__8': 28.99, 'volume_mad__8': 7813220.0, 'trade_date__8': datetime.date(2026, 3, 9), 'cours_reference__8': 30.0, 'variation_pct__8': 0.0, 'best_bid_qty__8': None, 'cours_plus_haut__8': None, 'statut__8': 'T', 'best_ask_qty__8': None, 'nombre_transactions__8': None, 'cours_ouverture__8': 28.98, 'valeur_name__8': 'ADDOUHA', 'capitalisation__8': None, 'cours_plus_bas__8': None, 'best_bid_price__9': None, 'best_ask_price__9': None, 'volume_titres__9': 43644, 'cours_close__9': 91.6, 'volume_mad__9': 4003947.92, 'trade_date__9': datetime.date(2026, 3, 9), 'cours_reference__9': 92.51, 'variation_pct__9': 0.0, 'best_bid_qty__9': None, 'cours_plus_haut__9': None, 'statut__9': 'T', 'best_ask_qty__9': None, 'nombre_transactions__9': None, 'cours_ouverture__9': 92.0, 'valeur_name__9': 'IAM', 'capitalisation__9': None, 'cours_plus_bas__9': None, 'best_bid_price__10': None, 'best_ask_price__10': None, 'volume_titres__10': 23835, 'cours_close__10': 1024.0, 'volume_mad__10': 24076966.0, 'trade_date__10': datetime.date(2026, 3, 9), 'cours_reference__10': 1065.0, 'variation_pct__10': 0.0, 'best_bid_qty__10': None, 'cours_plus_haut__10': None, 'statut__10': 'T', 'best_ask_qty__10': None, 'nombre_transactions__10': None, 'cours_ouverture__10': 1001.0, 'valeur_name__10': 'AKDITAL', 'capitalisation__10': None, 'cours_plus_bas__10': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « eod_bars_valeur_name_trade_date_key »
+DETAIL:  La clé « (valeur_name, trade_date)=(TAQA, 2026-03-09) » existe déjà.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level1.py", line 185, in scrape_level_1
+    df.to_sql(
+    ~~~~~~~~~^
+        'eod_bars',
+        ^^^^^^^^^^^
+    ...<3 lines>...
+        index=False
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3109, in to_sql
+    return sql.to_sql(
+           ~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<8 lines>...
+        method=method,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+           ~~~~~~~~~~~~~~~~~^
+        frame,
+        ^^^^^^
+    ...<9 lines>...
+        **engine_kwargs,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 2030, in to_sql
+    total_inserted = sql_engine.insert_records(
+        table=table,
+    ...<7 lines>...
+        **engine_kwargs,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1579, in insert_records
+    raise err
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1570, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1121, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1012, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1838, in _execute_context
+    return self._exec_insertmany_context(dialect, context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e,
+        ^^
+    ...<4 lines>...
+        is_sub_exec=True,
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2112, in _exec_insertmany_context
+    dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « eod_bars_valeur_name_trade_date_key »
+DETAIL:  La clé « (valeur_name, trade_date)=(TAQA, 2026-03-09) » existe déjà.
+
+[SQL: INSERT INTO md.eod_bars (valeur_name, trade_date, cours_ouverture, cours_close, cours_plus_haut, cours_plus_bas, cours_reference, variation_pct, volume_titres, nombre_transactions, capitalisation, best_bid_qty, best_ask_qty, best_bid_price, best_ask_ ... 4052 characters truncated ... t_ask_qty__10)s, %(best_bid_price__10)s, %(best_ask_price__10)s, %(statut__10)s, %(volume_mad__10)s)]
+[parameters: {'best_bid_price__0': None, 'best_ask_price__0': None, 'volume_titres__0': 384, 'cours_close__0': 1797.0, 'volume_mad__0': 690992.0, 'trade_date__0': datetime.date(2026, 3, 9), 'cours_reference__0': 1800.0, 'variation_pct__0': 0.0, 'best_bid_qty__0': None, 'cours_plus_haut__0': None, 'statut__0': 'T', 'best_ask_qty__0': None, 'nombre_transactions__0': None, 'cours_ouverture__0': 1810.0, 'valeur_name__0': 'TAQA', 'capitalisation__0': None, 'cours_plus_bas__0': None, 'best_bid_price__1': None, 'best_ask_price__1': None, 'volume_titres__1': 10743, 'cours_close__1': 748.8, 'volume_mad__1': 8080805.1, 'trade_date__1': datetime.date(2026, 3, 9), 'cours_reference__1': 760.0, 'variation_pct__1': 0.0, 'best_bid_qty__1': None, 'cours_plus_haut__1': None, 'statut__1': 'T', 'best_ask_qty__1': None, 'nombre_transactions__1': None, 'cours_ouverture__1': 760.0, 'valeur_name__1': 'SODEP', 'capitalisation__1': None, 'cours_plus_bas__1': None, 'best_bid_price__2': None, 'best_ask_price__2': None, 'volume_titres__2': 3434, 'cours_close__2': 2020.0, 'volume_mad__2': 6942303.0, 'trade_date__2': datetime.date(2026, 3, 9), 'cours_reference__2': 2190.0, 'variation_pct__2': 0.0, 'best_bid_qty__2': None, 'cours_plus_haut__2': None, 'statut__2': 'T', 'best_ask_qty__2': None, 'nombre_transactions__2': None, 'cours_ouverture__2': 2020.0, 'valeur_name__2': 'JET CONTRACTORS', 'capitalisation__2': None ... 87 parameters truncated ... 'best_ask_price__8': None, 'volume_titres__8': 273039, 'cours_close__8': 28.99, 'volume_mad__8': 7813220.0, 'trade_date__8': datetime.date(2026, 3, 9), 'cours_reference__8': 30.0, 'variation_pct__8': 0.0, 'best_bid_qty__8': None, 'cours_plus_haut__8': None, 'statut__8': 'T', 'best_ask_qty__8': None, 'nombre_transactions__8': None, 'cours_ouverture__8': 28.98, 'valeur_name__8': 'ADDOUHA', 'capitalisation__8': None, 'cours_plus_bas__8': None, 'best_bid_price__9': None, 'best_ask_price__9': None, 'volume_titres__9': 43644, 'cours_close__9': 91.6, 'volume_mad__9': 4003947.92, 'trade_date__9': datetime.date(2026, 3, 9), 'cours_reference__9': 92.51, 'variation_pct__9': 0.0, 'best_bid_qty__9': None, 'cours_plus_haut__9': None, 'statut__9': 'T', 'best_ask_qty__9': None, 'nombre_transactions__9': None, 'cours_ouverture__9': 92.0, 'valeur_name__9': 'IAM', 'capitalisation__9': None, 'cours_plus_bas__9': None, 'best_bid_price__10': None, 'best_ask_price__10': None, 'volume_titres__10': 23835, 'cours_close__10': 1024.0, 'volume_mad__10': 24076966.0, 'trade_date__10': datetime.date(2026, 3, 9), 'cours_reference__10': 1065.0, 'variation_pct__10': 0.0, 'best_bid_qty__10': None, 'cours_plus_haut__10': None, 'statut__10': 'T', 'best_ask_qty__10': None, 'nombre_transactions__10': None, 'cours_ouverture__10': 1001.0, 'valeur_name__10': 'AKDITAL', 'capitalisation__10': None, 'cours_plus_bas__10': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-03-09 13:10:51,570 - INFO - \U0001f680 Démarrage du Level 1 Scraper (EOD - End of Day).
+2026-03-09 13:10:51,570 - INFO - \U0001f4ca Level 1: Scrapping OHLCV (End of Day data) via Selenium...
+2026-03-09 13:10:52,002 - INFO - ====== WebDriver manager ======
+2026-03-09 13:10:53,785 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:10:54,870 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:10:55,544 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:11:19,809 - INFO - \u2705 Level 1 récupéré via Selenium. 80 lignes trouvées avant filtrage.
+2026-03-09 13:11:19,810 - INFO - \u2705 Après filtrage: 11 lignes correspondant à TARGET_STOCKS.
+2026-03-09 13:11:19,945 - INFO - \u2705 11 lignes insérées/mises à jour dans md.eod_bars avec succès (UPSERT).
+2026-03-09 13:11:31,021 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:19:49,658 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-10 14:19:00,088 - INFO - Level 1 service started
+2026-03-10 14:19:00,090 - INFO - Level 1 idle - waiting for market close
+2026-03-10 14:21:30,215 - INFO - Level 1 service started
+2026-03-10 14:21:30,215 - INFO - Level 1 idle - waiting for market close
+2026-03-10 14:23:20,137 - INFO - Level 1 service started
+2026-03-10 14:23:20,137 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:23:20,137 - INFO - ====== WebDriver manager ======
+2026-03-10 14:23:22,410 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:23:23,167 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:23:23,926 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:23:25,875 - INFO - WebDriver version 145.0.7632.117 selected
+2026-03-10 14:23:25,907 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-10 14:23:25,907 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-10 14:23:26,689 - INFO - Driver downloading response is 200
+2026-03-10 14:23:29,040 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:23:31,159 - INFO - Driver has been saved in cache [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117]
+2026-03-10 14:23:38,997 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:23:39,273 - ERROR - Level 1 error: 'utf-8' codec can't decode byte 0xe9 in position 103: invalid continuation byte
+Traceback (most recent call last):
+  File "c:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level1.py", line 235, in scrape_level_1_once
+    with engine.begin() as conn:
+         ~~~~~~~~~~~~^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3235, in begin
+    with self.connect() as conn:
+         ~~~~~~~~~~~~^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3271, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3295, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 626, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 103: invalid continuation byte
+2026-03-10 14:27:45,319 - INFO - Level 1 service started
+2026-03-10 14:27:45,319 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:27:45,319 - INFO - ====== WebDriver manager ======
+2026-03-10 14:27:46,824 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:27:47,558 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:27:48,270 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:27:56,007 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:27:56,323 - ERROR - Level 1 error: (psycopg2.errors.UndefinedTable) ERREUR:  la relation « ref.instrument_aliases » n'existe pas
+LINE 3:             FROM ref.instrument_aliases
+                         ^
+
+[SQL: 
+            SELECT alias_value, instrument_id
+            FROM ref.instrument_aliases
+            WHERE source_name = %(source_name)s
+        ]
+[parameters: {'source_name': 'casablanca_bourse'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: ERREUR:  la relation « ref.instrument_aliases » n'existe pas
+LINE 3:             FROM ref.instrument_aliases
+                         ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level1.py", line 236, in scrape_level_1_once
+    alias_map = load_alias_map(conn)
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level1.py", line 115, in load_alias_map
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<4 lines>...
+        {"source_name": SOURCE_NAME},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).mappings().all()
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) ERREUR:  la relation « ref.instrument_aliases » n'existe pas
+LINE 3:             FROM ref.instrument_aliases
+                         ^
+
+[SQL: 
+            SELECT alias_value, instrument_id
+            FROM ref.instrument_aliases
+            WHERE source_name = %(source_name)s
+        ]
+[parameters: {'source_name': 'casablanca_bourse'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 14:30:51,260 - INFO - Level 1 service started
+2026-03-10 14:30:51,260 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:30:51,260 - INFO - ====== WebDriver manager ======
+2026-03-10 14:30:53,142 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:30:53,960 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:30:54,706 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:31:31,807 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:31:31,881 - WARNING - Level 1: instrument not found for raw_name='TAQA MOROCCO'
+2026-03-10 14:31:31,881 - WARNING - Level 1: instrument not found for raw_name='SODEP-Marsa Maroc'
+2026-03-10 14:31:31,882 - WARNING - Level 1: instrument not found for raw_name='JET CONTRACTORS'
+2026-03-10 14:31:31,882 - WARNING - Level 1: instrument not found for raw_name='SGTM S.A'
+2026-03-10 14:31:31,883 - WARNING - Level 1: instrument not found for raw_name='TGCC S.A'
+2026-03-10 14:31:31,884 - WARNING - Level 1: instrument not found for raw_name='ALLIANCES'
+2026-03-10 14:31:31,884 - WARNING - Level 1: instrument not found for raw_name='DOUJA PROM ADDOHA'
+2026-03-10 14:31:31,886 - WARNING - Level 1: instrument not found for raw_name='AKDITAL'
+2026-03-10 14:31:31,891 - ERROR - Level 1 error: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « instrument_id » de la relation « eod_bars » n'existe pas
+LINE 3:             instrument_id,
+                    ^
+
+[SQL: 
+        INSERT INTO md.eod_bars (
+            instrument_id,
+            trade_date,
+            price,
+            open,
+            high,
+            low,
+            volume,
+            change_pct,
+            source_name,
+            scraped_at
+        )
+        VALUES (
+            %(instrument_id)s,
+            %(trade_date)s,
+            %(price)s,
+            %(open)s,
+            %(high)s,
+            %(low)s,
+            %(volume)s,
+            %(change_pct)s,
+            %(source_name)s,
+            now()
+        )
+        ON CONFLICT (instrument_id, trade_date)
+        DO UPDATE SET
+            price = EXCLUDED.price,
+            open = EXCLUDED.open,
+            high = EXCLUDED.high,
+            low = EXCLUDED.low,
+            volume = EXCLUDED.volume,
+            change_pct = EXCLUDED.change_pct,
+            source_name = EXCLUDED.source_name,
+            scraped_at = now()
+    ]
+[parameters: [{'instrument_id': 4, 'trade_date': datetime.date(2026, 3, 10), 'price': 695.0, 'open': 700.0, 'high': None, 'low': None, 'volume': 163428.0, 'change_pct': 4.06, 'source_name': 'casablanca_bourse'}, {'instrument_id': 9, 'trade_date': datetime.date(2026, 3, 10), 'price': 365.0, 'open': 388.5, 'high': None, 'low': None, 'volume': 12191.0, 'change_pct': -2.41, 'source_name': 'casablanca_bourse'}, {'instrument_id': 1, 'trade_date': datetime.date(2026, 3, 10), 'price': 92.61, 'open': 92.99, 'high': None, 'low': None, 'volume': 552431.0, 'change_pct': 2.9, 'source_name': 'casablanca_bourse'}]]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1930, in _exec_single_context
+    self.dialect.do_executemany(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\dialects\postgresql\psycopg2.py", line 800, in do_executemany
+    cursor.executemany(statement, parameters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne « instrument_id » de la relation « eod_bars » n'existe pas
+LINE 3:             instrument_id,
+                    ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level1.py", line 264, in scrape_level_1_once
+    inserted = upsert_eod_rows(conn, payload)
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrap_level1.py", line 212, in upsert_eod_rows
+    conn.execute(stmt, rows)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1930, in _exec_single_context
+    self.dialect.do_executemany(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\dialects\postgresql\psycopg2.py", line 800, in do_executemany
+    cursor.executemany(statement, parameters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « instrument_id » de la relation « eod_bars » n'existe pas
+LINE 3:             instrument_id,
+                    ^
+
+[SQL: 
+        INSERT INTO md.eod_bars (
+            instrument_id,
+            trade_date,
+            price,
+            open,
+            high,
+            low,
+            volume,
+            change_pct,
+            source_name,
+            scraped_at
+        )
+        VALUES (
+            %(instrument_id)s,
+            %(trade_date)s,
+            %(price)s,
+            %(open)s,
+            %(high)s,
+            %(low)s,
+            %(volume)s,
+            %(change_pct)s,
+            %(source_name)s,
+            now()
+        )
+        ON CONFLICT (instrument_id, trade_date)
+        DO UPDATE SET
+            price = EXCLUDED.price,
+            open = EXCLUDED.open,
+            high = EXCLUDED.high,
+            low = EXCLUDED.low,
+            volume = EXCLUDED.volume,
+            change_pct = EXCLUDED.change_pct,
+            source_name = EXCLUDED.source_name,
+            scraped_at = now()
+    ]
+[parameters: [{'instrument_id': 4, 'trade_date': datetime.date(2026, 3, 10), 'price': 695.0, 'open': 700.0, 'high': None, 'low': None, 'volume': 163428.0, 'change_pct': 4.06, 'source_name': 'casablanca_bourse'}, {'instrument_id': 9, 'trade_date': datetime.date(2026, 3, 10), 'price': 365.0, 'open': 388.5, 'high': None, 'low': None, 'volume': 12191.0, 'change_pct': -2.41, 'source_name': 'casablanca_bourse'}, {'instrument_id': 1, 'trade_date': datetime.date(2026, 3, 10), 'price': 92.61, 'open': 92.99, 'high': None, 'low': None, 'volume': 552431.0, 'change_pct': 2.9, 'source_name': 'casablanca_bourse'}]]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 14:32:58,886 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:32:58,886 - INFO - ====== WebDriver manager ======
+2026-03-10 14:33:00,359 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:33:01,053 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:33:01,784 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:33:07,813 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:33:07,818 - WARNING - Level 1: instrument not found for raw_name='TAQA MOROCCO'
+2026-03-10 14:33:07,819 - WARNING - Level 1: instrument not found for raw_name='SODEP-Marsa Maroc'
+2026-03-10 14:33:07,819 - WARNING - Level 1: instrument not found for raw_name='JET CONTRACTORS'
+2026-03-10 14:33:07,820 - WARNING - Level 1: instrument not found for raw_name='SGTM S.A'
+2026-03-10 14:33:07,820 - WARNING - Level 1: instrument not found for raw_name='TGCC S.A'
+2026-03-10 14:33:07,821 - WARNING - Level 1: instrument not found for raw_name='ALLIANCES'
+2026-03-10 14:33:07,822 - WARNING - Level 1: instrument not found for raw_name='DOUJA PROM ADDOHA'
+2026-03-10 14:33:07,823 - WARNING - Level 1: instrument not found for raw_name='AKDITAL'
+2026-03-10 14:33:07,836 - INFO - Level 1: upserted 3 EOD rows
+2026-03-10 14:33:19,092 - INFO - Level 1 service started
+2026-03-10 14:33:19,092 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:33:19,092 - INFO - ====== WebDriver manager ======
+2026-03-10 14:33:21,244 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:33:22,100 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:33:22,851 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:33:31,553 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:33:31,747 - WARNING - Level 1: instrument not found for raw_name='TAQA MOROCCO'
+2026-03-10 14:33:31,748 - WARNING - Level 1: instrument not found for raw_name='SODEP-Marsa Maroc'
+2026-03-10 14:33:31,748 - WARNING - Level 1: instrument not found for raw_name='JET CONTRACTORS'
+2026-03-10 14:33:31,749 - WARNING - Level 1: instrument not found for raw_name='SGTM S.A'
+2026-03-10 14:33:31,749 - WARNING - Level 1: instrument not found for raw_name='TGCC S.A'
+2026-03-10 14:33:31,751 - WARNING - Level 1: instrument not found for raw_name='ALLIANCES'
+2026-03-10 14:33:31,751 - WARNING - Level 1: instrument not found for raw_name='DOUJA PROM ADDOHA'
+2026-03-10 14:33:31,752 - WARNING - Level 1: instrument not found for raw_name='AKDITAL'
+2026-03-10 14:33:31,755 - INFO - Level 1: upserted 3 EOD rows
+2026-03-10 14:35:18,726 - INFO - Level 1 service started
+2026-03-10 14:35:18,727 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:35:18,727 - INFO - ====== WebDriver manager ======
+2026-03-10 14:35:20,101 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:35:20,843 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:35:22,152 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:35:28,359 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:35:28,447 - WARNING - Level 1: instrument not found for raw_name='TAQA MOROCCO'
+2026-03-10 14:35:28,448 - WARNING - Level 1: instrument not found for raw_name='SODEP-Marsa Maroc'
+2026-03-10 14:35:28,449 - WARNING - Level 1: instrument not found for raw_name='JET CONTRACTORS'
+2026-03-10 14:35:28,449 - WARNING - Level 1: instrument not found for raw_name='SGTM S.A'
+2026-03-10 14:35:28,450 - WARNING - Level 1: instrument not found for raw_name='TGCC S.A'
+2026-03-10 14:35:28,451 - WARNING - Level 1: instrument not found for raw_name='ALLIANCES'
+2026-03-10 14:35:28,452 - WARNING - Level 1: instrument not found for raw_name='DOUJA PROM ADDOHA'
+2026-03-10 14:35:28,453 - WARNING - Level 1: instrument not found for raw_name='AKDITAL'
+2026-03-10 14:35:28,455 - INFO - Level 1: upserted 3 EOD rows
+2026-03-10 14:36:34,524 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:36:34,525 - INFO - ====== WebDriver manager ======
+2026-03-10 14:36:36,598 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:36:37,253 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:36:38,039 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:36:44,938 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:36:44,942 - WARNING - Level 1: instrument not found for raw_name='TAQA MOROCCO'
+2026-03-10 14:36:44,942 - WARNING - Level 1: instrument not found for raw_name='SODEP-Marsa Maroc'
+2026-03-10 14:36:44,943 - WARNING - Level 1: instrument not found for raw_name='JET CONTRACTORS'
+2026-03-10 14:36:44,943 - WARNING - Level 1: instrument not found for raw_name='SGTM S.A'
+2026-03-10 14:36:44,944 - WARNING - Level 1: instrument not found for raw_name='TGCC S.A'
+2026-03-10 14:36:44,945 - WARNING - Level 1: instrument not found for raw_name='ALLIANCES'
+2026-03-10 14:36:44,945 - WARNING - Level 1: instrument not found for raw_name='DOUJA PROM ADDOHA'
+2026-03-10 14:36:44,947 - WARNING - Level 1: instrument not found for raw_name='AKDITAL'
+2026-03-10 14:36:44,949 - INFO - Level 1: upserted 3 EOD rows
+2026-03-10 14:38:34,420 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:38:34,421 - INFO - ====== WebDriver manager ======
+2026-03-10 14:38:36,436 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:38:37,268 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:38:38,155 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:38:45,036 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:38:45,039 - WARNING - Level 1: instrument not found for raw_name='TAQA MOROCCO'
+2026-03-10 14:38:45,039 - WARNING - Level 1: instrument not found for raw_name='SODEP-Marsa Maroc'
+2026-03-10 14:38:45,040 - WARNING - Level 1: instrument not found for raw_name='JET CONTRACTORS'
+2026-03-10 14:38:45,040 - WARNING - Level 1: instrument not found for raw_name='SGTM S.A'
+2026-03-10 14:38:45,040 - WARNING - Level 1: instrument not found for raw_name='TGCC S.A'
+2026-03-10 14:38:45,042 - WARNING - Level 1: instrument not found for raw_name='ALLIANCES'
+2026-03-10 14:38:45,042 - WARNING - Level 1: instrument not found for raw_name='DOUJA PROM ADDOHA'
+2026-03-10 14:38:45,043 - WARNING - Level 1: instrument not found for raw_name='AKDITAL'
+2026-03-10 14:38:45,044 - INFO - Level 1: upserted 3 EOD rows
+2026-03-10 14:40:15,939 - INFO - Level 1 service started
+2026-03-10 14:40:15,939 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:40:15,939 - INFO - ====== WebDriver manager ======
+2026-03-10 14:40:17,193 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:40:17,891 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:40:18,556 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:40:25,541 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:40:25,633 - INFO - Level 1: upserted 11 EOD rows
+2026-03-10 14:40:30,999 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:40:30,999 - INFO - ====== WebDriver manager ======
+2026-03-10 14:40:33,195 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:40:33,821 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:40:34,530 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:40:40,423 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:40:40,435 - INFO - Level 1: upserted 11 EOD rows
+2026-03-10 14:43:47,205 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:43:47,205 - INFO - ====== WebDriver manager ======
+2026-03-10 14:43:48,521 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:43:49,270 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:43:49,919 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:43:55,748 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:43:55,757 - INFO - Level 1: upserted 11 EOD rows
+2026-03-10 14:48:57,909 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:48:57,910 - INFO - ====== WebDriver manager ======
+2026-03-10 14:49:00,860 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:49:01,589 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:49:02,471 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:49:10,270 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:49:10,286 - INFO - Level 1: upserted 11 EOD rows
+2026-03-10 14:54:12,463 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:54:12,464 - INFO - ====== WebDriver manager ======
+2026-03-10 14:54:15,627 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:54:17,217 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:54:18,726 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:54:26,238 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:54:26,275 - INFO - Level 1: upserted 11 EOD rows
+2026-03-10 14:59:28,575 - INFO - Level 1: starting EOD scrape
+2026-03-10 14:59:28,576 - INFO - ====== WebDriver manager ======
+2026-03-10 14:59:31,900 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:59:32,920 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 14:59:33,916 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 14:59:40,025 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 14:59:40,039 - INFO - Level 1: upserted 11 EOD rows
+2026-03-10 15:04:42,279 - INFO - Level 1: starting EOD scrape
+2026-03-10 15:04:42,280 - INFO - ====== WebDriver manager ======
+2026-03-10 15:04:44,792 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 15:04:45,568 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 15:04:46,385 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 15:04:54,123 - INFO - Level 1: parsed 11 candidate rows
+2026-03-10 15:04:54,140 - INFO - Level 1: upserted 11 EOD rows

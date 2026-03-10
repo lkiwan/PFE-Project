@@ -1,0 +1,408 @@
+2026-03-05 00:10:25 - INFO - \U0001f433 Whale Scraper started.
+2026-03-05 00:10:25 - INFO - ====== WebDriver manager ======
+2026-03-05 00:10:26 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-05 00:10:39 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-05 00:10:41 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-05 00:10:42 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-05 00:11:52 - INFO - \U0001f44b Scraper t-7bess b yeddik.
+2026-03-05 00:11:52 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dï¿½ ï¿½tre fermï¿½e par lï¿½hï¿½te distant', None, 10054, None)': /session/3b0ed82fed5792d0f883519f814ecbb1
+2026-03-05 00:11:56 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015C5B822D50>: Failed to establish a new connection: [WinError 10061] Aucune connexion nï¿½a pu ï¿½tre ï¿½tablie car lï¿½ordinateur cible lï¿½a expressï¿½ment refusï¿½e')': /session/3b0ed82fed5792d0f883519f814ecbb1
+2026-03-05 00:12:00 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015C5B822990>: Failed to establish a new connection: [WinError 10061] Aucune connexion nï¿½a pu ï¿½tre ï¿½tablie car lï¿½ordinateur cible lï¿½a expressï¿½ment refusï¿½e')': /session/3b0ed82fed5792d0f883519f814ecbb1
+2026-03-05 22:55:12 - INFO - \U0001f433 Whale Scraper started.
+2026-03-05 22:55:12 - INFO - ====== WebDriver manager ======
+2026-03-05 22:55:14 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-05 22:55:14 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-05 22:55:15 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-05 22:55:16 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-05 23:32:26 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-05 23:37:26 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-05 23:42:26 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-05 23:47:26 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-05 23:52:26 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-05 23:57:26 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:13:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:18:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:23:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:28:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:33:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:38:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:43:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:48:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:53:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 00:58:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 01:03:55 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 01:04:44 - INFO - \U0001f44b Scraper t-7bess b yeddik.
+2026-03-06 01:04:49 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B1DBBE3380>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/6ef466024efbfa621d86dab58bf7aef5
+2026-03-06 01:06:52 - INFO - \U0001f433 Whale Scraper Anti-Bot started.
+2026-03-06 01:06:52 - INFO - ====== WebDriver manager ======
+2026-03-06 01:06:54 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:06:55 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:06:56 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:06:59 - INFO - WebDriver version 145.0.7632.117 selected
+2026-03-06 01:06:59 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-06 01:06:59 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-06 01:07:00 - INFO - Driver downloading response is 200
+2026-03-06 01:07:04 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:07:05 - INFO - Driver has been saved in cache [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117]
+2026-03-06 01:07:07 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil). Tsna...
+2026-03-06 01:10:33 - INFO - \U0001f44b Scraper t-7bess b yeddik.
+2026-03-06 01:10:33 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/0dad8d780a72b6db79e051e331c598bf
+2026-03-06 01:10:37 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023DE5482990>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/0dad8d780a72b6db79e051e331c598bf
+2026-03-06 01:10:41 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023DE5482490>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/0dad8d780a72b6db79e051e331c598bf
+2026-03-06 01:10:47 - INFO - \U0001f433 Whale Scraper Anti-Bot started.
+2026-03-06 01:10:47 - INFO - ====== WebDriver manager ======
+2026-03-06 01:10:49 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:10:50 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:10:51 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-06 01:10:52 - INFO - \U0001f680 Iteration jdida bdlat (Anti-Bot Mode ON).
+2026-03-06 01:10:59 - INFO - \u2705 IAM: Bid=93.5 | Ask=95
+2026-03-06 01:11:04 - INFO - \u2705 ATW: Bid=83.81 | Ask=86.2
+2026-03-06 01:11:11 - WARNING - \U0001f6d1 LES: Carnet khawi.
+2026-03-06 01:11:16 - INFO - \u2705 ADH: Bid=30 | Ask=30.6
+2026-03-06 01:11:22 - WARNING - \U0001f6d1 EQD: Carnet khawi.
+2026-03-06 01:11:30 - INFO - \u2705 SLF: Bid=857 | Ask=910
+2026-03-06 01:11:40 - WARNING - \U0001f6d1 BOA: Carnet khawi.
+2026-03-06 01:15:33 - INFO - \U0001f44b Scraper t-7bess b yeddik.
+2026-03-06 01:15:33 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/4af25d77ed29545c121356e1ef3e0be2
+2026-03-06 01:15:39 - INFO - \U0001f433 Whale Scraper Anti-Bot started.
+2026-03-06 01:15:39 - INFO - ====== WebDriver manager ======
+2026-03-06 01:15:41 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:15:41 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:15:42 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-06 01:15:44 - INFO - \U0001f680 Iteration jdida bdlat (Anti-Bot Mode ON).
+2026-03-06 01:15:49 - INFO - \u2705 IAM: Bid=93.5 | Ask=95
+2026-03-06 01:15:55 - INFO - \u2705 ATW: Bid=83.81 | Ask=86.2
+2026-03-06 01:16:00 - WARNING - \U0001f6d1 LES: Carnet khawi.
+2026-03-06 01:16:04 - INFO - \u2705 ADH: Bid=30 | Ask=30.6
+2026-03-06 01:16:12 - WARNING - \U0001f6d1 EQD: Carnet khawi.
+2026-03-06 01:16:17 - INFO - \u2705 SLF: Bid=857 | Ask=910
+2026-03-06 01:16:28 - WARNING - \U0001f6d1 BOA: Carnet khawi.
+2026-03-06 01:16:46 - INFO - \U0001f680 Iteration jdida bdlat (Anti-Bot Mode ON).
+2026-03-06 01:16:51 - INFO - \u2705 IAM: Bid=93.5 | Ask=95
+2026-03-06 01:16:58 - INFO - \U0001f44b Scraper t-7bess b yeddik.
+2026-03-06 01:16:58 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/acd9e74132dfc5a4749a07b96dfbf9ff
+2026-03-06 01:53:25 - INFO - \U0001f433 Whale Scraper started (Full Market).
+2026-03-06 01:53:25 - INFO - ====== WebDriver manager ======
+2026-03-06 01:53:27 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:53:27 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:53:28 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-06 01:53:30 - INFO - \U0001f634 Bourse sadda (Weekend aw f l-lil).
+2026-03-06 01:55:27 - INFO - \U0001f44b Scraper t-7bess b yeddik.
+2026-03-06 01:55:27 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/f53dec32f151b49e9578cf9a9eb678c1
+2026-03-06 01:55:33 - INFO - \U0001f433 Whale Scraper started (Full Market).
+2026-03-06 01:55:33 - INFO - ====== WebDriver manager ======
+2026-03-06 01:55:34 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:55:35 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:55:36 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-06 01:55:46 - INFO - \U0001f44b Scraper t-7bess b yeddik.
+2026-03-06 01:55:46 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/ad23f6a1955a26465d7b52c9c910386f
+2026-03-06 01:57:37 - INFO - \U0001f433 Whale Scraper started (Full Market).
+2026-03-06 01:57:37 - INFO - ====== WebDriver manager ======
+2026-03-06 01:57:38 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:57:38 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:57:39 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-06 01:57:40 - INFO - \U0001f680 Iteration bdlat (Full Market).
+2026-03-06 01:57:57 - INFO - \U0001f433 Whale Scraper started (Full Market).
+2026-03-06 01:57:57 - INFO - ====== WebDriver manager ======
+2026-03-06 01:57:58 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:57:59 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:57:59 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-06 01:58:00 - INFO - \U0001f680 Iteration bdlat (Full Market).
+2026-03-06 01:59:56 - INFO - \U0001f433 Whale Scraper started (Full Market).
+2026-03-06 01:59:56 - INFO - ====== WebDriver manager ======
+2026-03-06 01:59:57 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:59:57 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-06 01:59:58 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-06 01:59:59 - INFO - \U0001f680 Iteration bdlat (Full Market).
+2026-03-06 02:00:08 - INFO - \u2705 IAM: Bid=93.5 | Ask=95
+2026-03-06 02:00:14 - INFO - \u2705 ATW: Bid=83.81 | Ask=86.2
+2026-03-06 02:00:21 - WARNING - \U0001f6d1 LES: Carnet khawi.
+2026-03-06 02:00:28 - INFO - \u2705 ADH: Bid=30 | Ask=30.6
+2026-03-06 02:00:33 - WARNING - \U0001f6d1 EQD: Carnet khawi.
+2026-03-06 02:00:39 - INFO - \u2705 SLF: Bid=857 | Ask=910
+2026-03-06 02:00:46 - INFO - \u2705 BCP: Bid=251.1 | Ask=257.9
+2026-03-06 02:00:54 - WARNING - \U0001f6d1 BOA: Carnet khawi.
+2026-03-06 02:00:59 - INFO - \u2705 CIH: Bid=370 | Ask=384.85
+2026-03-06 02:01:02 - INFO - \U0001f44b Scraper t-7bess b yeddik.
+2026-03-06 02:01:02 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/759c2b4387633d6f69d14b5f17cff277
+2026-03-09 13:19:52 - INFO - \U0001f433 Scraper Niveau 2 (Order books) démarré.
+2026-03-09 13:19:52 - INFO - ====== WebDriver manager ======
+2026-03-09 13:19:54 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:19:55 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:19:56 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:19:57 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:20:01 - ERROR - \u274c Erreur lors du scraping de AKDITAL: (psycopg2.errors.UndefinedTable) ERREUR:  la relation « ref_instruments » n'existe pas
+LINE 1: SELECT instrument_id FROM ref_instruments WHERE symbol = 'AK...
+                                  ^
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'AKDITAL'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-09 13:20:23 - ERROR - \u274c Erreur lors du scraping de ALLIANCES: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'ALLIANCES'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:25 - ERROR - \u274c Erreur lors du scraping de ATW: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'ATW'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:27 - ERROR - \u274c Erreur lors du scraping de CIH: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'CIH'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:30 - ERROR - \u274c Erreur lors du scraping de ADDOUHA: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'ADDOUHA'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:32 - ERROR - \u274c Erreur lors du scraping de IAM: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'IAM'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:34 - ERROR - \u274c Erreur lors du scraping de JET CONTRACTORS: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'JET CONTRACTORS'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:37 - ERROR - \u274c Erreur lors du scraping de SGTM: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'SGTM'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:39 - ERROR - \u274c Erreur lors du scraping de SODEP: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'SODEP'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:41 - ERROR - \u274c Erreur lors du scraping de TAQA: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'TAQA'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:20:43 - ERROR - \u274c Erreur lors du scraping de TGCC: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: SELECT instrument_id FROM ref_instruments WHERE symbol = %(s)s]
+[parameters: {'s': 'TGCC'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-09 13:21:44 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:21:44 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/a8f47b2f95e6967c55f3509edc6329a0
+2026-03-09 13:21:48 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C06F864550>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/a8f47b2f95e6967c55f3509edc6329a0
+2026-03-09 13:21:52 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C06F864690>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/a8f47b2f95e6967c55f3509edc6329a0
+2026-03-09 13:25:45 - INFO - \U0001f433 Scraper Niveau 2 (Order books) démarré.
+2026-03-09 13:25:45 - INFO - ====== WebDriver manager ======
+2026-03-09 13:25:47 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:25:48 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:25:48 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:25:50 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:25:53 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:25:55 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:25:58 - INFO - \u2705 ATW: Bid=78.2 | Ask=78.99 enregistré en BD.
+2026-03-09 13:26:00 - INFO - \u2705 CIH: Bid=370 | Ask=379 enregistré en BD.
+2026-03-09 13:26:02 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:04 - INFO - \U0001f433 Scraper Niveau 2 (Order books) démarré.
+2026-03-09 13:26:04 - INFO - ====== WebDriver manager ======
+2026-03-09 13:26:05 - INFO - \u2705 IAM: Bid=91.56 | Ask=91.6 enregistré en BD.
+2026-03-09 13:26:05 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:26:06 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:26:07 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:07 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:26:08 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:26:09 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:11 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:12 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:14 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:14 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:16 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:17 - INFO - \u2705 ATW: Bid=78.2 | Ask=78.99 enregistré en BD.
+2026-03-09 13:26:19 - INFO - \u2705 CIH: Bid=370 | Ask=379 enregistré en BD.
+2026-03-09 13:26:21 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:23 - INFO - \u2705 IAM: Bid=91.56 | Ask=91.6 enregistré en BD.
+2026-03-09 13:26:26 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:28 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:30 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:26:30 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/21707e70ffde661d7a837b2f0356a2e4
+2026-03-09 13:26:30 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:33 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:34 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002627C077110>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/21707e70ffde661d7a837b2f0356a2e4
+2026-03-09 13:26:35 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:26:38 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002627C077D90>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/21707e70ffde661d7a837b2f0356a2e4
+2026-03-09 13:27:44 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:27:44 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/94ef00fc02fca948d5074df859a80917
+2026-03-09 13:27:48 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027BA18F7110>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/94ef00fc02fca948d5074df859a80917
+2026-03-09 13:27:52 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027BA18F7D90>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/94ef00fc02fca948d5074df859a80917
+2026-03-09 13:28:05 - INFO - \U0001f433 Scraper Niveau 2 (Order books) démarré.
+2026-03-09 13:28:05 - INFO - ====== WebDriver manager ======
+2026-03-09 13:28:06 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:28:08 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:28:15 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:28:17 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:28:20 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:28:22 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:28:24 - INFO - \u2705 ATW: Bid=78.2 | Ask=78.99 enregistré en BD.
+2026-03-09 13:28:26 - INFO - \u2705 CIH: Bid=370 | Ask=378 enregistré en BD.
+2026-03-09 13:28:29 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:28:31 - INFO - \u2705 IAM: Bid=91.44 | Ask=91.49 enregistré en BD.
+2026-03-09 13:28:34 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:28:36 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:28:38 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:28:41 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:28:43 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:29:34 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:29:34 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/f6ccc41f394b7ea6e9a8c60b9eb35aa1
+2026-03-09 13:29:38 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002572E467110>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f6ccc41f394b7ea6e9a8c60b9eb35aa1
+2026-03-09 13:29:42 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002572E467D90>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f6ccc41f394b7ea6e9a8c60b9eb35aa1
+2026-03-09 13:30:30 - INFO - \U0001f433 Scraper Niveau 2 (Order books) démarré.
+2026-03-09 13:30:30 - INFO - ====== WebDriver manager ======
+2026-03-09 13:30:32 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:30:33 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:30:34 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:30:36 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:30:39 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:30:42 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:30:44 - INFO - \u2705 ATW: Bid=78.2 | Ask=78.99 enregistré en BD.
+2026-03-09 13:30:47 - INFO - \u2705 CIH: Bid=370 | Ask=378 enregistré en BD.
+2026-03-09 13:30:49 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:30:52 - INFO - \u2705 IAM: Bid=91.44 | Ask=91.49 enregistré en BD.
+2026-03-09 13:30:54 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:30:57 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:30:59 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:31:02 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:31:04 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:31:09 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 13:31:09 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/4f8ec6d8db8be12bf5e4d7889f2b393f
+2026-03-09 13:31:13 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023C4AD07D90>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/4f8ec6d8db8be12bf5e4d7889f2b393f
+2026-03-09 13:31:17 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023C4AD07ED0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/4f8ec6d8db8be12bf5e4d7889f2b393f
+2026-03-09 13:34:16 - INFO - \U0001f433 Scraper Niveau 2 (Order books) démarré.
+2026-03-09 13:34:16 - INFO - ====== WebDriver manager ======
+2026-03-09 13:34:17 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:34:18 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 13:34:18 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 13:34:19 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:34:22 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:34:24 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:34:27 - INFO - \u2705 ATW: Bid=78.2 | Ask=78.99 enregistré en BD.
+2026-03-09 13:34:29 - INFO - \u2705 CIH: Bid=370 | Ask=375 enregistré en BD.
+2026-03-09 13:34:32 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:34:35 - INFO - \u2705 IAM: Bid=91.4 | Ask=91.45 enregistré en BD.
+2026-03-09 13:34:37 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:34:42 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:34:46 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:34:48 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:34:51 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:39:51 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:39:53 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:39:56 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:39:58 - INFO - \u2705 ATW: Bid=78.2 | Ask=78.99 enregistré en BD.
+2026-03-09 13:40:00 - INFO - \u2705 CIH: Bid=0 | Ask=0 enregistré en BD.
+2026-03-09 13:40:03 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:40:06 - INFO - \u2705 IAM: Bid=0 | Ask=0 enregistré en BD.
+2026-03-09 13:40:09 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:40:11 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:40:14 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:40:16 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:40:18 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:45:18 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:45:21 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:45:23 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:45:26 - INFO - \u2705 ATW: Bid=78.2 | Ask=78.2 enregistré en BD.
+2026-03-09 13:45:28 - INFO - \u2705 CIH: Bid=367.2 | Ask=374 enregistré en BD.
+2026-03-09 13:45:31 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:45:35 - INFO - \u2705 IAM: Bid=0 | Ask=0 enregistré en BD.
+2026-03-09 13:45:38 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:45:40 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:45:42 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:45:45 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:45:47 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:50:47 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:50:50 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:50:52 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:50:54 - INFO - \u2705 ATW: Bid=78.1 | Ask=78.2 enregistré en BD.
+2026-03-09 13:50:57 - INFO - \u2705 CIH: Bid=367.2 | Ask=374 enregistré en BD.
+2026-03-09 13:50:59 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:51:02 - INFO - \u2705 IAM: Bid=90 | Ask=91.49 enregistré en BD.
+2026-03-09 13:51:04 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:51:07 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:51:09 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:51:11 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:51:14 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:56:14 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 13:56:16 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:56:18 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:56:21 - INFO - \u2705 ATW: Bid=78.1 | Ask=78.2 enregistré en BD.
+2026-03-09 13:56:23 - INFO - \u2705 CIH: Bid=367.2 | Ask=374 enregistré en BD.
+2026-03-09 13:56:26 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:56:28 - INFO - \u2705 IAM: Bid=90 | Ask=91.49 enregistré en BD.
+2026-03-09 13:56:30 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:56:33 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:56:35 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:56:38 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 13:56:40 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:01:40 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 14:01:43 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:01:46 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:01:48 - INFO - \u2705 ATW: Bid=78.1 | Ask=78.2 enregistré en BD.
+2026-03-09 14:01:50 - INFO - \u2705 CIH: Bid=367.2 | Ask=374 enregistré en BD.
+2026-03-09 14:01:53 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:01:55 - INFO - \u2705 IAM: Bid=90 | Ask=91.49 enregistré en BD.
+2026-03-09 14:01:58 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:02:00 - WARNING - \u26a0\ufe0f SGTM: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:02:02 - WARNING - \u26a0\ufe0f SODEP: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:02:05 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:02:07 - WARNING - \u26a0\ufe0f TGCC: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:05:51 - INFO - \U0001f433 Scraper Niveau 2 (Order books) démarré.
+2026-03-09 14:05:51 - INFO - ====== WebDriver manager ======
+2026-03-09 14:05:52 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 14:05:53 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 14:05:54 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 14:05:55 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 14:06:02 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:06:05 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:06:09 - INFO - \u2705 ATW: Bid=667.9 (x4902.0) | Ask=675.0 (x1000.0) enregistré.
+2026-03-09 14:06:13 - INFO - \u2705 CIH: Bid=367.2 (x10.0) | Ask=374.0 (x690.0) enregistré.
+2026-03-09 14:06:14 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 14:06:18 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF21D0FED0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/4df789bf0801a9d0003857c4d7621596
+2026-03-09 14:06:22 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF21D0F750>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/4df789bf0801a9d0003857c4d7621596
+2026-03-09 14:06:26 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF21D7DCD0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/4df789bf0801a9d0003857c4d7621596
+2026-03-09 14:07:07 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 14:07:11 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:07:13 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:07:15 - INFO - \u2705 ATW: Bid=78.1 | Ask=78.2 enregistré en BD.
+2026-03-09 14:07:18 - INFO - \u2705 CIH: Bid=367.2 | Ask=374 enregistré en BD.
+2026-03-09 14:07:20 - WARNING - \u26a0\ufe0f ADDOUHA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:07:23 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 14:07:27 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000277C9FC3620>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/5ce57e0813ca705dd744ee12cde1fc9d
+2026-03-09 14:07:31 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000277C9FC7ED0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/5ce57e0813ca705dd744ee12cde1fc9d
+2026-03-09 14:07:35 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000277CA118B90>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/5ce57e0813ca705dd744ee12cde1fc9d
+2026-03-09 14:08:22 - INFO - \U0001f433 Scraper Niveau 2 (Order books) démarré.
+2026-03-09 14:08:22 - INFO - ====== WebDriver manager ======
+2026-03-09 14:08:24 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 14:08:25 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-09 14:08:25 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-09 14:08:27 - INFO - \U0001f680 Nouvelle itération de scraping (Order Book).
+2026-03-09 14:08:32 - WARNING - \u26a0\ufe0f AKDITAL: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:08:35 - WARNING - \u26a0\ufe0f ALLIANCES: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:08:38 - INFO - \u2705 ATW: Bid=667.9 (x4902.0) | Ask=675.0 (x1000.0) enregistré.
+2026-03-09 14:08:41 - INFO - \u2705 CIH: Bid=367.2 (x10.0) | Ask=374.0 (x690.0) enregistré.
+2026-03-09 14:08:43 - WARNING - \U0001f6d1 ADDOUHA: Le tableau du carnet d'ordres est vide.
+2026-03-09 14:08:46 - INFO - \u2705 IAM: Bid=90.0 (x58756.0) | Ask=91.49 (x3.0) enregistré.
+2026-03-09 14:08:49 - WARNING - \u26a0\ufe0f JET CONTRACTORS: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:08:51 - WARNING - \U0001f6d1 SGTM: Le tableau du carnet d'ordres est vide.
+2026-03-09 14:08:54 - WARNING - \U0001f6d1 SODEP: Le tableau du carnet d'ordres est vide.
+2026-03-09 14:08:56 - WARNING - \u26a0\ufe0f TAQA: Instrument non trouvé dans la table ref.instruments.
+2026-03-09 14:08:59 - WARNING - \U0001f6d1 TGCC: Le tableau du carnet d'ordres est vide.
+2026-03-09 14:10:51 - INFO - \U0001f44b Fin du scraper demandée par l'utilisateur.
+2026-03-09 14:10:51 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/77b628ba41a0eeca022f3e2d081d0319

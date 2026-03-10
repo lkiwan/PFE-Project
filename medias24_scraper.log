@@ -1,0 +1,992 @@
+2026-03-10 21:28:37,373 - INFO - ====== WebDriver manager ======
+2026-03-10 21:28:39,601 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:28:40,296 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:28:40,935 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:29:03,765 - ERROR - Error scraping history for akdital: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:29:09,168 - WARNING - No orderbook table found for akdital
+2026-03-10 21:29:26,156 - ERROR - Error scraping history for alliances: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:29:28,642 - ERROR - Critical error in main scraper:
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 349, in main
+    insert_order_book_row(conn, ob_payload)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 297, in insert_order_book_row
+    conn.execute(
+    ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<21 lines>...
+        payload,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                 source_name,
+                        ^
+
+[SQL: 
+            INSERT INTO md.order_books (
+                instrument_id,
+                snapshot_time,
+                bid_price,
+                bid_qty,
+                ask_price,
+                ask_qty,
+                source_name,
+                scraped_at
+            )
+            VALUES (
+                %(instrument_id)s,
+                %(snapshot_time)s,
+                %(bid_price)s,
+                %(bid_qty)s,
+                %(ask_price)s,
+                %(ask_qty)s,
+                %(source_name)s,
+                now()
+            )
+        ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 21, 29, 28, 623609), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 21:30:55,150 - INFO - ====== WebDriver manager ======
+2026-03-10 21:30:57,419 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:30:58,139 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:30:58,881 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:31:18,470 - ERROR - Error scraping history for akdital: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:31:22,517 - WARNING - No orderbook table found for akdital
+2026-03-10 21:31:40,112 - ERROR - Error scraping history for alliances: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:31:42,598 - ERROR - DB Error inserting orderbook: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                     source_name,
+                            ^
+
+[SQL: 
+                INSERT INTO md.order_books (
+                    instrument_id,
+                    snapshot_time,
+                    bid_price,
+                    bid_qty,
+                    ask_price,
+                    ask_qty,
+                    source_name,
+                    scraped_at
+                )
+                VALUES (
+                    %(instrument_id)s,
+                    %(snapshot_time)s,
+                    %(bid_price)s,
+                    %(bid_qty)s,
+                    %(ask_price)s,
+                    %(ask_qty)s,
+                    %(source_name)s,
+                    now()
+                )
+            ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 21, 31, 42, 595457), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 21:31:42,602 - ERROR - Critical error in main scraper:
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 343, in main
+    instrument_id = ensure_instrument(conn, symbol)
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 112, in ensure_instrument
+    instrument_id = get_instrument_id_by_symbol(conn, symbol)
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 101, in get_instrument_id_by_symbol
+    return conn.execute(
+           ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<4 lines>...
+        {"symbol": symbol},
+        ^^^^^^^^^^^^^^^^^^^
+    ).scalar_one_or_none()
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            SELECT instrument_id
+            FROM ref.instruments
+            WHERE symbol = %(symbol)s OR name = %(symbol)s
+        ]
+[parameters: {'symbol': 'ATW'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 21:31:57,265 - INFO - ====== WebDriver manager ======
+2026-03-10 21:31:59,028 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:32:00,156 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:32:00,755 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:32:22,513 - ERROR - Error scraping history for akdital: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:32:30,648 - WARNING - No orderbook table found for akdital
+2026-03-10 21:32:47,614 - ERROR - Error scraping history for alliances: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:32:50,311 - ERROR - DB Error inserting orderbook: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « source_name » de la relation « order_books » n'existe pas
+LINE 9:                     source_name,
+                            ^
+
+[SQL: 
+                INSERT INTO md.order_books (
+                    instrument_id,
+                    snapshot_time,
+                    bid_price,
+                    bid_qty,
+                    ask_price,
+                    ask_qty,
+                    source_name,
+                    scraped_at
+                )
+                VALUES (
+                    %(instrument_id)s,
+                    %(snapshot_time)s,
+                    %(bid_price)s,
+                    %(bid_qty)s,
+                    %(ask_price)s,
+                    %(ask_qty)s,
+                    %(source_name)s,
+                    now()
+                )
+            ]
+[parameters: {'instrument_id': 12, 'snapshot_time': datetime.datetime(2026, 3, 10, 21, 32, 50, 303275), 'bid_price': 415.15, 'bid_qty': 3.0, 'ask_price': 417.5, 'ask_qty': 200.0, 'source_name': 'medias24'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-10 21:32:50,318 - ERROR - Critical error in main scraper:
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 348, in main
+    instrument_id = ensure_instrument(conn, symbol)
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 112, in ensure_instrument
+    instrument_id = get_instrument_id_by_symbol(conn, symbol)
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 101, in get_instrument_id_by_symbol
+    return conn.execute(
+           ~~~~~~~~~~~~^
+        text("""
+        ^^^^^^^^
+    ...<4 lines>...
+        {"symbol": symbol},
+        ^^^^^^^^^^^^^^^^^^^
+    ).scalar_one_or_none()
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) ERREUR:  la transaction est annulée, les commandes sont ignorées jusqu'à la fin du bloc
+de la transaction
+
+[SQL: 
+            SELECT instrument_id
+            FROM ref.instruments
+            WHERE symbol = %(symbol)s OR name = %(symbol)s
+        ]
+[parameters: {'symbol': 'ATW'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-03-10 21:33:48,786 - INFO - ====== WebDriver manager ======
+2026-03-10 21:33:50,205 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:33:50,997 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:33:51,826 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:33:54,188 - ERROR - Error scraping history via API for akdital: 'NoneType' object is not subscriptable
+2026-03-10 21:33:54,658 - ERROR - Error scraping history via API for alliances: 'NoneType' object is not subscriptable
+2026-03-10 21:33:55,032 - ERROR - Error scraping history via API for attijariwafa-bank: 'NoneType' object is not subscriptable
+2026-03-10 21:33:55,526 - ERROR - Error scraping history via API for cih: 'NoneType' object is not subscriptable
+2026-03-10 21:33:56,188 - ERROR - Error scraping history via API for douja-prom-addoha: 'NoneType' object is not subscriptable
+2026-03-10 21:33:56,689 - ERROR - Error scraping history via API for maroc-telecom: 'NoneType' object is not subscriptable
+2026-03-10 21:33:57,316 - ERROR - Error scraping history via API for jet-contractors: 'NoneType' object is not subscriptable
+2026-03-10 21:33:57,963 - ERROR - Error scraping history via API for societe-d-equipement-domestique-et-menager: 'NoneType' object is not subscriptable
+2026-03-10 21:33:58,538 - ERROR - Error scraping history via API for marsa-maroc: 'NoneType' object is not subscriptable
+2026-03-10 21:33:59,071 - ERROR - Error scraping history via API for taqa-morocco: 'NoneType' object is not subscriptable
+2026-03-10 21:33:59,662 - ERROR - Error scraping history via API for tgcc-s.a: 'NoneType' object is not subscriptable
+2026-03-10 21:34:33,778 - INFO - ====== WebDriver manager ======
+2026-03-10 21:34:35,162 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:34:35,895 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:34:36,650 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:34:40,211 - ERROR - Error scraping history via API for akdital: 'NoneType' object is not subscriptable
+2026-03-10 21:34:47,885 - ERROR - Error scraping history via API for alliances: 'NoneType' object is not subscriptable
+2026-03-10 21:34:48,227 - ERROR - Error scraping history via API for attijariwafa-bank: 'NoneType' object is not subscriptable
+2026-03-10 21:34:48,613 - ERROR - Error scraping history via API for cih: 'NoneType' object is not subscriptable
+2026-03-10 21:34:48,955 - ERROR - Error scraping history via API for douja-prom-addoha: 'NoneType' object is not subscriptable
+2026-03-10 21:34:49,282 - ERROR - Error scraping history via API for maroc-telecom: 'NoneType' object is not subscriptable
+2026-03-10 21:34:49,621 - ERROR - Error scraping history via API for jet-contractors: 'NoneType' object is not subscriptable
+2026-03-10 21:34:49,986 - ERROR - Error scraping history via API for societe-d-equipement-domestique-et-menager: 'NoneType' object is not subscriptable
+2026-03-10 21:34:50,327 - ERROR - Error scraping history via API for marsa-maroc: 'NoneType' object is not subscriptable
+2026-03-10 21:34:50,683 - ERROR - Error scraping history via API for taqa-morocco: 'NoneType' object is not subscriptable
+2026-03-10 21:34:52,445 - ERROR - Error scraping history via API for tgcc-s.a: 'NoneType' object is not subscriptable
+2026-03-10 21:40:59,288 - INFO - ====== WebDriver manager ======
+2026-03-10 21:41:00,591 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:41:01,246 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:41:01,920 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:41:03,820 - ERROR - Error scraping history via API for aktidal: 'NoneType' object is not subscriptable
+2026-03-10 21:41:04,177 - ERROR - Error scraping history via API for alliances-p: 'NoneType' object is not subscriptable
+2026-03-10 21:41:04,576 - ERROR - Error scraping history via API for attijariwafa-bank: 'NoneType' object is not subscriptable
+2026-03-10 21:41:04,923 - ERROR - Error scraping history via API for cih-p: 'NoneType' object is not subscriptable
+2026-03-10 21:41:05,267 - ERROR - Error scraping history via API for addoha-p: 'NoneType' object is not subscriptable
+2026-03-10 21:41:05,676 - ERROR - Error scraping history via API for maroc-telecom: 'NoneType' object is not subscriptable
+2026-03-10 21:41:06,045 - ERROR - Error scraping history via API for jet-contractors-p: 'NoneType' object is not subscriptable
+2026-03-10 21:41:06,340 - ERROR - Error scraping history via API for sgtm-p: 'NoneType' object is not subscriptable
+2026-03-10 21:41:06,652 - ERROR - Error scraping history via API for sodep-p: 'NoneType' object is not subscriptable
+2026-03-10 21:41:06,996 - ERROR - Error scraping history via API for taqa-morocco-p: 'NoneType' object is not subscriptable
+2026-03-10 21:41:07,308 - ERROR - Error scraping history via API for tgcc: 'NoneType' object is not subscriptable
+2026-03-10 21:44:58,416 - ERROR - Critical error in main scraper:
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 218, in main
+    driver = get_chrome_driver()
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 50, in get_chrome_driver
+    options = Options()
+              ^^^^^^^
+NameError: name 'Options' is not defined. Did you mean: 'Optional'?
+2026-03-10 21:45:18,159 - INFO - ====== WebDriver manager ======
+2026-03-10 21:45:19,680 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:45:20,404 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:45:21,156 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:45:41,388 - ERROR - Error scraping history via Selenium for aktidal: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:46:07,030 - ERROR - Error scraping history via Selenium for alliances-p: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:46:27,452 - ERROR - Error scraping history via Selenium for attijariwafa-bank: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:46:47,466 - ERROR - Error scraping history via Selenium for cih-p: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:47:07,396 - ERROR - Error scraping history via Selenium for addoha-p: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:47:27,020 - ERROR - Error scraping history via Selenium for maroc-telecom: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:47:40,911 - INFO - ====== WebDriver manager ======
+2026-03-10 21:47:42,854 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:47:43,539 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:47:44,716 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:47:46,828 - ERROR - Error scraping history via Selenium for jet-contractors-p: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:48:10,209 - ERROR - Error scraping history via Selenium for sgtm-p: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:48:30,309 - ERROR - Error scraping history via Selenium for sodep-p: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:48:50,691 - ERROR - Error scraping history via Selenium for taqa-morocco-p: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:49:10,687 - ERROR - Error scraping history via Selenium for tgcc: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xd57dd3
+	0xd57e14
+	0xb61db0
+	0xbac20a
+	0xbac4ab
+	0xbede32
+	0xbcea84
+	0xbeb621
+	0xbce7d6
+	0xba0049
+	0xba0e04
+	0xfb6924
+	0xfb1bf7
+	0xfcf5a0
+	0xd70f58
+	0xd7891d
+	0xd60648
+	0xd60812
+	0xd4a21a
+	0x76ca7ba9
+	0x7778c3ab
+	0x7778c32f
+
+2026-03-10 21:50:44,113 - INFO - ====== WebDriver manager ======
+2026-03-10 21:50:45,695 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:50:46,387 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:50:47,202 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:52:19,636 - INFO - ====== WebDriver manager ======
+2026-03-10 21:52:21,181 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:52:21,909 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:52:22,594 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:58:12,412 - INFO - ====== WebDriver manager ======
+2026-03-10 21:58:13,775 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:58:14,450 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:58:15,071 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 21:59:37,284 - INFO - ====== WebDriver manager ======
+2026-03-10 21:59:39,066 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:59:39,691 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 21:59:40,330 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 22:06:44,504 - INFO - ====== WebDriver manager ======
+2026-03-10 22:06:45,931 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 22:06:46,674 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 22:06:47,385 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 22:15:18,931 - INFO - ====== WebDriver manager ======
+2026-03-10 22:15:20,638 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 22:15:21,372 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 22:15:22,176 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 22:59:36,485 - INFO - ====== WebDriver manager ======
+2026-03-10 22:59:37,997 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 22:59:38,789 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 22:59:39,664 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 22:59:50,414 - ERROR - Critical error in main scraper:
+Traceback (most recent call last):
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1930, in _exec_single_context
+    self.dialect.do_executemany(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\dialects\postgresql\psycopg2.py", line 800, in do_executemany
+    cursor.executemany(statement, parameters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « order_books_pkey »
+DETAIL:  La clé « (instrument_id, snapshot_time)=(11, 2026-03-10 22:59:50.366771) » existe déjà.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 305, in main
+    inserted_ob = insert_orderbook_to_db(conn, ob_payloads)
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\medias24_scraper\file.py", line 264, in insert_orderbook_to_db
+    conn.execute(stmt, payloads)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1930, in _exec_single_context
+    self.dialect.do_executemany(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\dialects\postgresql\psycopg2.py", line 800, in do_executemany
+    cursor.executemany(statement, parameters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) ERREUR:  la valeur d'une clé dupliquée rompt la contrainte unique « order_books_pkey »
+DETAIL:  La clé « (instrument_id, snapshot_time)=(11, 2026-03-10 22:59:50.366771) » existe déjà.
+
+[SQL: 
+        INSERT INTO md.order_books (
+            instrument_id, snapshot_time, bid_price, bid_qty, ask_price, ask_qty
+        )
+        VALUES (
+            %(instrument_id)s, %(snapshot_time)s, %(bid_price)s, %(bid_qty)s, %(ask_price)s, %(ask_qty)s
+        )
+    ]
+[parameters: [{'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1060.0, 'bid_qty': 5.0, 'ask_price': 1080.0, 'ask_qty': 3.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1050.0, 'bid_qty': 1130.0, 'ask_price': 1089.0, 'ask_qty': 1.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1040.0, 'bid_qty': 25.0, 'ask_price': 1090.0, 'ask_qty': 155.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1030.0, 'bid_qty': 1.0, 'ask_price': 1094.0, 'ask_qty': 5.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1025.0, 'bid_qty': 400.0, 'ask_price': 1097.0, 'ask_qty': 20.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1020.0, 'bid_qty': 111.0, 'ask_price': 1100.0, 'ask_qty': 21.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1015.0, 'bid_qty': 206.0, 'ask_price': 1107.0, 'ask_qty': 10.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1014.0, 'bid_qty': 20.0, 'ask_price': 1111.0, 'ask_qty': 6.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1013.0, 'bid_qty': 22.0, 'ask_price': 1115.0, 'ask_qty': 1.0}, {'instrument_id': 11, 'snapshot_time': datetime.datetime(2026, 3, 10, 22, 59, 50, 366771), 'bid_price': 1012.0, 'bid_qty': 30.0, 'ask_price': 1120.0, 'ask_qty': 70.0}]]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-03-10 23:00:45,649 - INFO - ====== WebDriver manager ======
+2026-03-10 23:00:47,342 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:00:47,993 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:00:48,701 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 23:09:04,489 - INFO - ====== WebDriver manager ======
+2026-03-10 23:09:05,866 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:09:06,489 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:09:07,110 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 23:13:29,468 - INFO - ====== WebDriver manager ======
+2026-03-10 23:13:30,491 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:13:30,934 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:13:31,401 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 23:15:52,927 - INFO - ====== WebDriver manager ======
+2026-03-10 23:15:59,985 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:16:01,882 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:16:04,344 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-10 23:18:20,943 - INFO - ====== WebDriver manager ======
+2026-03-10 23:18:21,925 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:18:22,408 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-10 23:18:22,885 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache

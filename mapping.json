@@ -1,0 +1,10 @@
+{
+    "date": "Seance",
+    "symbol": "Ticker",
+    "open": "Ouverture",
+    "high": "Plus_Haut",
+    "low": "Plus_Bas",
+    "close": "Cloture",
+    "volume": "Volume",
+    "turnover": "Valeur"
+}

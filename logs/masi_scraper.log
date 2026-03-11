@@ -1,0 +1,14 @@
+2026-03-11 00:22:25,480 - INFO - ====== WebDriver manager ======
+2026-03-11 00:22:32,662 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 00:22:34,595 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 00:22:36,342 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 00:22:40,994 - INFO - WebDriver version 145.0.7632.117 selected
+2026-03-11 00:22:41,015 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-11 00:22:41,016 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-11 00:22:43,302 - INFO - Driver downloading response is 200
+2026-03-11 00:22:46,598 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 00:22:50,387 - INFO - Driver has been saved in cache [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117]
+2026-03-11 00:24:36,400 - INFO - ====== WebDriver manager ======
+2026-03-11 00:24:37,551 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 00:24:38,150 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 00:24:38,759 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache

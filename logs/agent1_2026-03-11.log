@@ -1,0 +1,961 @@
+2026-03-11 16:32:40,766 - INFO - ============================================================
+2026-03-11 16:32:40,766 - INFO - STARTING ANALYSIS: ATW
+2026-03-11 16:32:40,766 - INFO - ============================================================
+2026-03-11 16:32:40,767 - INFO - [ATW] Step 1: Pre-fetching all market data...
+2026-03-11 16:32:40,767 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 16:32:40,945 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-09","close":667.9,"open":null,"high":690.0,"low":667.9,"volume":48497.0,"change_pct":-4.74},{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volum...
+2026-03-11 16:32:40,945 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 16:32:40,952 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 16:32:40,953 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 16:32:40,955 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 16:32:40,955 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 16:32:40,959 - INFO - [ATW] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":720.0,"ask_qty":249,"snapshot_time":"2026-03-10 23:18:43.692205"},{"bid_price":0.0,"bid_qty":0,"ask_price":715.0,"ask_qty":85,"snapshot_time":"2026-03-10 23:1...
+2026-03-11 16:32:40,959 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 16:32:41,010 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 16:32:41,010 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 16:32:41,070 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-09", "close": 667.9, "sma_5": 688.4, "sma_10": 711.98, "rsi": 21.55, "macd": -16.76, "macd_signal": -9.51, "macd_histogram": -7.25, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 16:32:41,070 - INFO - [ATW] Data report length: 7133 chars
+2026-03-11 16:32:41,070 - INFO - [ATW] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 16:33:58,503 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:34:12,106 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:34:13,139 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 16:34:13,140 - INFO - [ATW] LLM Response: Prediction saved for ATW: BUY (confidence: 85.0%). The reasoning behind this prediction is based on the bullish trend in the MASI index, positive news articles supporting potential buy opportunities, and the current buying pressure observed in the order book. This structured prediction has been recorded, reflecting a 2.13% expected movement in the next trading session....
+2026-03-11 16:34:13,141 - INFO - [ATW] Tool call: {'id': 'call_0y9wfecn', 'function': {'arguments': '{"masi_trend":"BULLISH","predicted_move":2.13,"reasoning":"Recent market data and technical analysis show a bullish trend in the MASI index with positive news articles supporting potential buy opportunities. The order book also indicates buying pressure.","resistance_price":680,"strength":8,"support_price":650,"trend":"BULLISH","symbol":"ATW","predicted_action":"BUY","confidence_pct":85,"news_sentiment":"POSITIVE","orderbook_bias":"BUY_PRESSURE"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 16:34:13,141 - INFO - [ATW] Analysis complete
+2026-03-11 16:41:08,506 - INFO - ============================================================
+2026-03-11 16:41:08,507 - INFO - 🚀 STARTING SCRAPERS (5 scripts)
+2026-03-11 16:41:08,507 - INFO - ============================================================
+2026-03-11 16:41:08,507 - INFO - Running scraper: scrapers/scrap_level1.py
+2026-03-11 16:41:09,987 - ERROR - Scraper failed: scrapers/scrap_level1.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\scrap_level1.py", line 64, in <module>
+    engine = get_engine()
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\scrap_level1.py", line 60, in get_engine
+    raise RuntimeError("Missing DATABASE_URL environment variable")
+RuntimeError: Missing DATABASE_URL environment variable
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\scrap_level1.py']' returned non-zero exit status 1.
+2026-03-11 16:41:09,990 - INFO - Running scraper: scrapers/scrap_level2.py
+2026-03-11 16:41:11,321 - ERROR - Scraper failed: scrapers/scrap_level2.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\scrap_level2.py", line 65, in <module>
+    engine = get_engine()
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\scrap_level2.py", line 61, in get_engine
+    raise RuntimeError("Missing DATABASE_URL environment variable")
+RuntimeError: Missing DATABASE_URL environment variable
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\scrap_level2.py']' returned non-zero exit status 1.
+2026-03-11 16:41:11,322 - INFO - Running scraper: scrapers/masi_scraper.py
+2026-03-11 16:41:12,372 - ERROR - Scraper failed: scrapers/masi_scraper.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\masi_scraper.py", line 121, in scrape_masi
+    print(f"\U0001f680 Starting MASI Index Scraper (Investing.com)...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\masi_scraper.py", line 228, in <module>
+    scrape_masi()
+    ~~~~~~~~~~~^^
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\masi_scraper.py", line 220, in scrape_masi
+    print(f"\u274c Critical Error: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\masi_scraper.py']' returned non-zero exit status 1.
+2026-03-11 16:41:12,373 - INFO - Running scraper: scrapers/boursenews_scraper.py
+2026-03-11 16:41:13,287 - ERROR - Scraper failed: scrapers/boursenews_scraper.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\boursenews_scraper.py", line 155, in scrape_boursenews
+    print(f"\U0001f680 Initializing BourseNews WebDriver...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\boursenews_scraper.py", line 204, in <module>
+    scrape_boursenews()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\boursenews_scraper.py", line 197, in scrape_boursenews
+    print(f"\u274c Critical Error: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\boursenews_scraper.py']' returned non-zero exit status 1.
+2026-03-11 16:41:13,288 - INFO - Running scraper: scrapers/medias24_news_scraper.py
+2026-03-11 16:41:14,258 - ERROR - Scraper failed: scrapers/medias24_news_scraper.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\medias24_news_scraper.py", line 252, in <module>
+    scrape_medias24_news()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\medias24_news_scraper.py", line 201, in scrape_medias24_news
+    print(f"\U0001f680 Starting Medias24 News Scraper ({MAX_PAGES} pages)...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\medias24_news_scraper.py']' returned non-zero exit status 1.
+2026-03-11 16:41:14,260 - INFO - ✅ All scrapers finished.
+2026-03-11 16:41:14,261 - INFO - ============================================================
+2026-03-11 16:41:14,262 - INFO - STARTING ANALYSIS: ATW
+2026-03-11 16:41:14,262 - INFO - ============================================================
+2026-03-11 16:41:14,262 - INFO - [ATW] Step 1: Pre-fetching all market data...
+2026-03-11 16:41:14,262 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 16:41:14,450 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-09","close":667.9,"open":null,"high":690.0,"low":667.9,"volume":48497.0,"change_pct":-4.74},{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volum...
+2026-03-11 16:41:14,450 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 16:41:14,458 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 16:41:14,458 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 16:41:14,461 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 16:41:14,461 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 16:41:14,466 - INFO - [ATW] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":720.0,"ask_qty":249,"snapshot_time":"2026-03-10 23:18:43.692205"},{"bid_price":0.0,"bid_qty":0,"ask_price":715.0,"ask_qty":85,"snapshot_time":"2026-03-10 23:1...
+2026-03-11 16:41:14,466 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 16:41:14,517 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 16:41:14,518 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 16:41:14,572 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-09", "close": 667.9, "sma_5": 688.4, "sma_10": 711.98, "rsi": 21.55, "macd": -16.76, "macd_signal": -9.51, "macd_histogram": -7.25, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 16:41:14,572 - INFO - [ATW] Data report length: 7133 chars
+2026-03-11 16:41:14,572 - INFO - [ATW] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 16:42:35,484 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:42:50,605 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:42:51,721 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 16:42:51,723 - INFO - [ATW] LLM Response: The structured prediction has been successfully saved for the stock **ATW** with a recommended action of "BUY" and a confidence percentage of 70%. The reasoning provided includes an analysis considering both technical indicators and recent news articles, indicating that despite a bearish trend, there might be support from ongoing redressment in the MASI index. 
+
+This prediction suggests looking for entry opportunities in ATW while maintaining cautious due diligence and ensuring compliance with a...
+2026-03-11 16:42:51,724 - INFO - [ATW] Tool call: {'id': 'call_2doi53cy', 'function': {'arguments': '{"confidence_pct":70,"reasoning":"Despite showing a bearish trend over the past few days due to close prices below the long-term SMA and an oversold RSI, recent articles suggest ongoing redressment for the MASI index. This could potentially provide support for ATW. Additionally, while the order book shows some buy pressure with ask prices above current levels, the immediate strong bearish momentum may still hold.","strength":7,"support_price":640,"symbol":"ATW","trend":"BEARISH","resistance_price":705,"predicted_move":-2.13,"predicted_action":"BUY"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 16:42:51,725 - INFO - [ATW] Analysis complete
+2026-03-11 21:33:03,196 - INFO - ============================================================
+2026-03-11 21:33:03,197 - INFO - 🚀 STARTING SCRAPERS (5 scripts)
+2026-03-11 21:33:03,198 - INFO - ============================================================
+2026-03-11 21:33:03,198 - INFO - Running scraper: scrapers/scrap_level1.py
+2026-03-11 21:33:04,906 - ERROR - Scraper failed: scrapers/scrap_level1.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\scrap_level1.py", line 64, in <module>
+    engine = get_engine()
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\scrap_level1.py", line 60, in get_engine
+    raise RuntimeError("Missing DATABASE_URL environment variable")
+RuntimeError: Missing DATABASE_URL environment variable
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\scrap_level1.py']' returned non-zero exit status 1.
+2026-03-11 21:33:04,909 - INFO - Running scraper: scrapers/scrap_level2.py
+2026-03-11 21:33:06,495 - ERROR - Scraper failed: scrapers/scrap_level2.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\scrap_level2.py", line 65, in <module>
+    engine = get_engine()
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\scrap_level2.py", line 61, in get_engine
+    raise RuntimeError("Missing DATABASE_URL environment variable")
+RuntimeError: Missing DATABASE_URL environment variable
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\scrap_level2.py']' returned non-zero exit status 1.
+2026-03-11 21:33:06,497 - INFO - Running scraper: scrapers/masi_scraper.py
+2026-03-11 21:33:07,752 - ERROR - Scraper failed: scrapers/masi_scraper.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\masi_scraper.py", line 121, in scrape_masi
+    print(f"\U0001f680 Starting MASI Index Scraper (Investing.com)...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\masi_scraper.py", line 228, in <module>
+    scrape_masi()
+    ~~~~~~~~~~~^^
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\masi_scraper.py", line 220, in scrape_masi
+    print(f"\u274c Critical Error: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\masi_scraper.py']' returned non-zero exit status 1.
+2026-03-11 21:33:07,754 - INFO - Running scraper: scrapers/boursenews_scraper.py
+2026-03-11 21:33:08,822 - ERROR - Scraper failed: scrapers/boursenews_scraper.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\boursenews_scraper.py", line 155, in scrape_boursenews
+    print(f"\U0001f680 Initializing BourseNews WebDriver...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\boursenews_scraper.py", line 204, in <module>
+    scrape_boursenews()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\boursenews_scraper.py", line 197, in scrape_boursenews
+    print(f"\u274c Critical Error: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\boursenews_scraper.py']' returned non-zero exit status 1.
+2026-03-11 21:33:08,824 - INFO - Running scraper: scrapers/medias24_news_scraper.py
+2026-03-11 21:33:09,982 - ERROR - Scraper failed: scrapers/medias24_news_scraper.py
+Error: Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\medias24_news_scraper.py", line 252, in <module>
+    scrape_medias24_news()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\scrapers\medias24_news_scraper.py", line 201, in scrape_medias24_news
+    print(f"\U0001f680 Starting Medias24 News Scraper ({MAX_PAGES} pages)...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\arhou\OneDrive\Bureau\PFE project\agents\agent1_analyst.py", line 234, in run_scrapers
+    result = subprocess.run(
+        [sys.executable, script_path],
+    ...<3 lines>...
+        check=True
+    )
+  File "C:\Users\arhou\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\arhou\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\arhou\\OneDrive\\Bureau\\PFE project\\scrapers\\medias24_news_scraper.py']' returned non-zero exit status 1.
+2026-03-11 21:33:09,984 - INFO - ✅ All scrapers finished.
+2026-03-11 21:33:09,986 - INFO - ============================================================
+2026-03-11 21:33:09,986 - INFO - STARTING ANALYSIS: MASI
+2026-03-11 21:33:09,986 - INFO - ============================================================
+2026-03-11 21:33:09,986 - INFO - [MASI] Step 1: Pre-fetching all market data...
+2026-03-11 21:33:09,987 - INFO - [MASI] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:33:10,141 - INFO - [MASI] Stock history: {"error": "No EOD data found for MASI"}...
+2026-03-11 21:33:10,142 - INFO - [MASI] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:33:10,152 - INFO - [MASI] Historical trend: {"symbol": "MASI", "timeframe": "weekly", "data_points": 52, "52w_high": 20088.14, "52w_low": 16070.49, "avg_price": 18599.8, "current_vs_52w_high_pct": -14.89, "recent_prices": [{"trade_date": "2026-...
+2026-03-11 21:33:10,152 - INFO - [MASI] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:33:10,155 - INFO - [MASI] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:33:10,155 - INFO - [MASI] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:33:10,159 - INFO - [MASI] Orderbook: {"error": "No orderbook data for MASI"}...
+2026-03-11 21:33:10,160 - INFO - [MASI] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:33:10,222 - INFO - [MASI] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 21:33:10,222 - INFO - [MASI] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:33:10,379 - INFO - [MASI] Technicals: {"error": "Not enough data for technical analysis on MASI (need \u22655 days, have 0)"}
+2026-03-11 21:33:10,380 - INFO - [MASI] Data report length: 4502 chars
+2026-03-11 21:33:10,380 - INFO - [MASI] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:34:47,137 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:34:59,642 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:35:00,789 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:35:00,790 - INFO - [MASI] LLM Response: Based on the provided market data, here's a structured prediction for stock symbol **MASI**:
+
+```json
+{
+    "symbol": "MASI",
+    "predicted_action": "HOLD",
+    "confidence_pct": 70,
+    "reasoning": "The MASI index has shown recent fluctuations with a general trend of decline over the past few weeks. However, there are signs of potential support and positive news articles pointing towards a possible rebound. The current resistance level is around 18,500, which could limit any upward movement f...
+2026-03-11 21:35:00,791 - INFO - [MASI] Tool call: {'id': 'call_8t45jm6f', 'function': {'arguments': '{"symbol":"MASI","predicted_action":"HOLD","trend":"BEARISH","support_price":16902.46,"strength":7,"orderbook_bias":"BALANCED","confidence_pct":70,"reasoning":"The MASI index has shown recent fluctuations with a general trend of decline over the past few weeks. However, there are signs of potential support and positive news articles pointing towards a possible rebound. The current resistance level is around 18,500, which could limit any upward movement for now.","resistance_price":18500,"predicted_move":-2,"masi_trend":"BEARISH","news_sentiment":"POSITIVE"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:35:00,792 - INFO - [MASI] Analysis complete
+2026-03-11 21:37:38,554 - INFO - ============================================================
+2026-03-11 21:37:38,555 - INFO - STARTING ANALYSIS: ATW
+2026-03-11 21:37:38,555 - INFO - ============================================================
+2026-03-11 21:37:38,556 - INFO - [ATW] Step 1: Pre-fetching all market data...
+2026-03-11 21:37:38,556 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:37:38,691 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-09","close":667.9,"open":null,"high":690.0,"low":667.9,"volume":48497.0,"change_pct":-4.74},{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volum...
+2026-03-11 21:37:38,692 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:37:38,708 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 21:37:38,709 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:37:38,713 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:37:38,714 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:37:38,723 - INFO - [ATW] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":720.0,"ask_qty":249,"snapshot_time":"2026-03-10 23:18:43.692205"},{"bid_price":0.0,"bid_qty":0,"ask_price":715.0,"ask_qty":85,"snapshot_time":"2026-03-10 23:1...
+2026-03-11 21:37:38,724 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:37:38,900 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 21:37:38,901 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:37:38,973 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-09", "close": 667.9, "sma_5": 688.4, "sma_10": 711.98, "rsi": 21.55, "macd": -16.76, "macd_signal": -9.51, "macd_histogram": -7.25, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 21:37:38,973 - INFO - [ATW] Data report length: 7133 chars
+2026-03-11 21:37:38,973 - INFO - [ATW] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:39:00,986 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:39:46,639 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:39:59,316 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:40:00,505 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:40:00,507 - INFO - [ATW] LLM Response: It appears that the `resistance_price` parameter is required and currently set to `null`. As this field is necessary for the validation, let's choose a reasonable value based on current market data.
+
+For the purposes of example, I will assume the nearest resistance level price for stock ATW is $700. Please confirm if you have a specific resistance level in mind or need further assistance with this value.
+
+Let me update the `resistance_price` and try again:
+
+```json
+Prediction for stock ATW has b...
+2026-03-11 21:40:00,507 - INFO - [ATW] Tool call: {'id': 'call_824nxa5b', 'function': {'arguments': '{"resistance_price":null,"support_price":650,"news_sentiment":"POSITIVE","reasoning":"The recent market data indicates a bearish trend for ATW, with a decreasing close price over the last few days. However, the technical indicators reveal that the stock is currently oversold (RSI at 21.55) and trading below both its 5-day and 10-day simple moving averages (SMA). Additionally, the weekly historical trend shows that ATW has shown some signs of recovery recently. Amid a bearish MASI index trend, there is room for potential counter-trend bounce in ATW\'s price. The positive news articles hint at opportunities for positioning within the market. Given these factors, it suggests that buying could be advisable as the stock might rebound from oversold levels.","strength":8,"trend":"BEARISH","masi_trend":"BEARISH","symbol":"ATW","predicted_action":"BUY","confidence_pct":75}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:40:00,508 - INFO - [ATW] Tool call: {'id': 'call_gu51fgul', 'function': {'arguments': '{"masi_trend":"BEARISH","news_sentiment":"POSITIVE","resistance_price":700,"symbol":"ATW","trend":"BEARISH","confidence_pct":75,"predicted_action":"BUY","reasoning":"The recent market data indicates a bearish trend for ATW, with a decreasing close price over the last few days. However, the technical indicators reveal that the stock is currently oversold (RSI at 21.55) and trading below both its 5-day and 10-day simple moving averages (SMA). Additionally, the weekly historical trend shows that ATW has shown some signs of recovery recently. Amid a bearish MASI index trend, there is room for potential counter-trend bounce in ATW\'s price. The positive news articles hint at opportunities for positioning within the market. Given these factors, it suggests that buying could be advisable as the stock might rebound from oversold levels.","strength":8,"support_price":650}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:40:00,509 - INFO - [ATW] Analysis complete
+2026-03-11 21:40:32,898 - INFO - ============================================================
+2026-03-11 21:40:32,898 - INFO - STARTING ANALYSIS: ATW
+2026-03-11 21:40:32,899 - INFO - ============================================================
+2026-03-11 21:40:32,899 - INFO - [ATW] Step 1: Pre-fetching all market data...
+2026-03-11 21:40:32,899 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:40:32,977 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-09","close":667.9,"open":null,"high":690.0,"low":667.9,"volume":48497.0,"change_pct":-4.74},{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volum...
+2026-03-11 21:40:32,977 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:40:32,982 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 21:40:32,982 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:40:32,986 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:40:32,986 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:40:32,990 - INFO - [ATW] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":720.0,"ask_qty":249,"snapshot_time":"2026-03-10 23:18:43.692205"},{"bid_price":0.0,"bid_qty":0,"ask_price":715.0,"ask_qty":85,"snapshot_time":"2026-03-10 23:1...
+2026-03-11 21:40:32,990 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:40:33,146 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 21:40:33,146 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:40:33,203 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-09", "close": 667.9, "sma_5": 688.4, "sma_10": 711.98, "rsi": 21.55, "macd": -16.76, "macd_signal": -9.51, "macd_histogram": -7.25, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 21:40:33,204 - INFO - [ATW] Data report length: 7133 chars
+2026-03-11 21:40:33,204 - INFO - [ATW] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:41:45,628 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:42:07,147 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:42:08,250 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:42:08,251 - INFO - [ATW] LLM Response: The structured prediction for ATW has been successfully saved with the following details:
+
+- **Predicted Action:** BUY
+- **Confidence:** 85%
+- **Reasoning:** The recent price action shows a pullback from the highs, and while the current price is oversold, we see positive news about the MASI index improving. This, coupled with the order book suggesting buying pressure, might indicate an upcoming rally. Additionally, the recent support level could be found around 650, which currently serves as a f...
+2026-03-11 21:42:08,251 - INFO - [ATW] Tool call: {'id': 'call_nrij8a77', 'function': {'arguments': '{"predicted_action":"BUY","confidence_pct":85,"strength":8,"support_price":650,"trend":"NEUTRAL","predicted_move":1.5,"news_sentiment":"POSITIVE","symbol":"ATW","reasoning":"The recent price action shows a pullback from the highs, and while the current price is oversold, we see positive news about the MASI index improving. This, coupled with the order book suggesting buying pressure, might indicate an upcoming rally. Additionally, the recent support level could be found around 650, which currently serves as a floor for the stock.","resistance_price":720,"masi_trend":"BULLISH"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:42:08,252 - INFO - [ATW] Analysis complete
+2026-03-11 21:44:50,953 - INFO - Whale Analyst starting — analyzing 11 stocks
+2026-03-11 21:44:50,954 - INFO - ============================================================
+2026-03-11 21:44:50,955 - INFO - STARTING ANALYSIS: ADDOHA-P
+2026-03-11 21:44:50,955 - INFO - ============================================================
+2026-03-11 21:44:50,955 - INFO - [ADDOHA-P] Step 1: Pre-fetching all market data...
+2026-03-11 21:44:50,955 - INFO - [ADDOHA-P] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:44:51,037 - INFO - [ADDOHA-P] Stock history: [{"trade_date":"2026-03-09","close":28.0,"open":null,"high":29.1,"low":27.91,"volume":331657.0,"change_pct":-6.67},{"trade_date":"2026-03-06","close":30.0,"open":null,"high":31.6,"low":29.1,"volume":8...
+2026-03-11 21:44:51,038 - INFO - [ADDOHA-P] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:44:51,044 - INFO - [ADDOHA-P] Historical trend: {"error": "No historical data for ADDOHA-P (weekly)"}...
+2026-03-11 21:44:51,045 - INFO - [ADDOHA-P] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:44:51,048 - INFO - [ADDOHA-P] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:44:51,048 - INFO - [ADDOHA-P] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:44:51,054 - INFO - [ADDOHA-P] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":0.0,"ask_qty":0,"snapshot_time":"2026-03-10 23:18:58.404537"},{"bid_price":27.0,"bid_qty":400,"ask_price":0.0,"ask_qty":0,"snapshot_time":"2026-03-10 23:18:58...
+2026-03-11 21:44:51,054 - INFO - [ADDOHA-P] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:44:51,117 - INFO - [ADDOHA-P] News: [{"title":"Bourse de Casablanca : le MASI rebondit de 2,23% apr\u00e8s l\u2019accalmie des prix de l\u2019\u00e9nergie","published_date":"Mardi 10 Mars 2026 - PAR","source_name":"boursenews"},{"title"...
+2026-03-11 21:44:51,117 - INFO - [ADDOHA-P] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:44:51,174 - INFO - [ADDOHA-P] Technicals: {"symbol": "ADDOHA-P", "trade_date": "2026-03-09", "close": 28.0, "sma_5": 28.61, "sma_10": 28.77, "rsi": 42.52, "macd": -0.43, "macd_signal": -0.38, "macd_histogram": -0.05, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 21:44:51,175 - INFO - [ADDOHA-P] Data report length: 6259 chars
+2026-03-11 21:44:51,175 - INFO - [ADDOHA-P] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:46:06,093 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:46:30,970 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:46:32,169 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:46:32,170 - INFO - [ADDOHA-P] LLM Response: The structured prediction for ADDOHA-P has been successfully saved as follows:
+
+- **Action**: **HOLD**
+- **Confidence Level**: 55.0%
+- **Reasoning**: The recent trading activity of ADDOHA-P stock shows some volatility, with price movements both up and down. Currently, the stock is trading below its simple moving averages (SMA), indicating a bearish trend according to technical indicators like MACD. However, there is no strong bias in the order book or significant market sentiment suggesting an i...
+2026-03-11 21:46:32,171 - INFO - [ADDOHA-P] Tool call: {'id': 'call_yr4jzh84', 'function': {'arguments': '{"support_price":27.91,"trend":"BEARISH","masi_trend":"BEARISH","news_sentiment":"NEUTRAL","orderbook_bias":"BALANCED","symbol":"ADDOHA-P","predicted_action":"HOLD","confidence_pct":55,"reasoning":"The recent trading activity of ADDOHA-P stock has shown some volatility with both positive and negative price movements. Currently, the stock is trading below its simple moving averages (SMA), indicating a bearish trend according to technical indicators like MACD. However, there is no strong bias in the order book or significant market sentiment suggesting an imminent move. Given the neutral RSI reading, it seems prudent to advise investors to hold their positions but remain cautious. The stock\'s performance aligns with the MASI index showing a bearish trend, further supporting this \'HOLD\' recommendation.","resistance_price":31.6,"strength":5}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:46:32,172 - INFO - [ADDOHA-P] Analysis complete
+2026-03-11 21:46:32,172 - INFO - ============================================================
+2026-03-11 21:46:32,172 - INFO - STARTING ANALYSIS: AKDITAL
+2026-03-11 21:46:32,172 - INFO - ============================================================
+2026-03-11 21:46:32,173 - INFO - [AKDITAL] Step 1: Pre-fetching all market data...
+2026-03-11 21:46:32,173 - INFO - [AKDITAL] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:46:32,178 - INFO - [AKDITAL] Stock history: [{"trade_date":"2026-03-09","close":1009.0,"open":null,"high":1035.0,"low":1000.0,"volume":29680.0,"change_pct":-5.26},{"trade_date":"2026-03-06","close":1065.0,"open":null,"high":1138.0,"low":1065.0,...
+2026-03-11 21:46:32,178 - INFO - [AKDITAL] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:46:32,183 - INFO - [AKDITAL] Historical trend: {"symbol": "AKDITAL", "timeframe": "weekly", "data_points": 52, "52w_high": 1580.0, "52w_low": 1065.0, "avg_price": 1355.27, "current_vs_52w_high_pct": -32.59, "recent_prices": [{"trade_date": "2026-0...
+2026-03-11 21:46:32,183 - INFO - [AKDITAL] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:46:32,186 - INFO - [AKDITAL] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:46:32,187 - INFO - [AKDITAL] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:46:32,189 - INFO - [AKDITAL] Orderbook: [{"bid_price":1012.0,"bid_qty":30,"ask_price":1120.0,"ask_qty":70,"snapshot_time":"2026-03-10 23:18:31.232478"},{"bid_price":1013.0,"bid_qty":22,"ask_price":1115.0,"ask_qty":1,"snapshot_time":"2026-03...
+2026-03-11 21:46:32,190 - INFO - [AKDITAL] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:46:32,193 - INFO - [AKDITAL] News: [{"title":"Bourse de Casablanca: La correction du MASI ouvre des opportunit\u00e9s de repositionnement","published_date":"Mardi 10 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casa...
+2026-03-11 21:46:32,194 - INFO - [AKDITAL] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:46:32,205 - INFO - [AKDITAL] Technicals: {"symbol": "AKDITAL", "trade_date": "2026-03-09", "close": 1009.0, "sma_5": 1028.8, "sma_10": 1083.1, "rsi": 36.73, "macd": -20.09, "macd_signal": -7.62, "macd_histogram": -12.47, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 21:46:32,205 - INFO - [AKDITAL] Data report length: 7216 chars
+2026-03-11 21:46:32,205 - INFO - [AKDITAL] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:47:49,842 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:48:25,368 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:48:31,721 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:48:33,074 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:48:33,075 - INFO - [AKDITAL] LLM Response: The `trade_date` parameter is not recognized by the `save_prediction` function. This field is not necessary in your current function schema and can be omitted. I will proceed without including this argument.
+
+Let's save the prediction using the available parameters:
+
+The prediction has been successfully saved for AKDITAL with a predicted action of "HOLD" and a confidence percentage of 50.0%. If you need any further analysis or have more data to add, feel free to let me know!...
+2026-03-11 21:48:33,076 - INFO - [AKDITAL] Tool call: {'id': 'call_c8n51bc2', 'function': {'arguments': '{"predicted_action":"HOLD","confidence_pct":50,"reasoning":"The recent market trend for AKDITAL is volatile with significant swings in both directions over the past few days. The stock has seen a strong drop on March 9th and had a rebound later that week. Additionally, while the RSI suggests that the stock might be oversold, neither MACD nor SMA crossover signals provide clear buy or sell indications at this time. The order book does not show any strong buyer or seller pressure as well. Considering the recent corrective movements in the MASI index and mixed sentiment from the news articles, it\'s prudent to hold on the investment for now.","resistance_price":1050,"strength":6,"support_price":980,"trade_date":"2026-03-10","symbol":"AKDITAL"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:48:33,076 - INFO - [AKDITAL] Tool call: {'id': 'call_72hqc99b', 'function': {'arguments': '{"strength":6,"support_price":980,"symbol":"AKDITAL","confidence_pct":50,"predicted_action":"HOLD","reasoning":"The recent market trend for AKDITAL is volatile with significant swings in both directions over the past few days. The stock has seen a strong drop on March 9th and had a rebound later that week. Additionally, while the RSI suggests that the stock might be oversold, neither MACD nor SMA crossover signals provide clear buy or sell indications at this time. The order book does not show any strong buyer or seller pressure as well. Considering the recent corrective movements in the MASI index and mixed sentiment from the news articles, it\'s prudent to hold on the investment for now.","resistance_price":1050}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:48:33,077 - INFO - [AKDITAL] Analysis complete
+2026-03-11 21:48:33,077 - INFO - ============================================================
+2026-03-11 21:48:33,077 - INFO - STARTING ANALYSIS: ALLIANCES
+2026-03-11 21:48:33,077 - INFO - ============================================================
+2026-03-11 21:48:33,078 - INFO - [ALLIANCES] Step 1: Pre-fetching all market data...
+2026-03-11 21:48:33,078 - INFO - [ALLIANCES] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:48:33,086 - INFO - [ALLIANCES] Stock history: [{"trade_date":"2026-03-09","close":391.5,"open":null,"high":395.0,"low":378.05,"volume":69524.0,"change_pct":-6.56},{"trade_date":"2026-03-06","close":419.0,"open":null,"high":450.0,"low":410.0,"volu...
+2026-03-11 21:48:33,086 - INFO - [ALLIANCES] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:48:33,090 - INFO - [ALLIANCES] Historical trend: {"symbol": "ALLIANCES", "timeframe": "weekly", "data_points": 52, "52w_high": 618.1, "52w_low": 419.0, "avg_price": 523.25, "current_vs_52w_high_pct": -32.21, "recent_prices": [{"trade_date": "2026-03...
+2026-03-11 21:48:33,090 - INFO - [ALLIANCES] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:48:33,092 - INFO - [ALLIANCES] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:48:33,093 - INFO - [ALLIANCES] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:48:33,096 - INFO - [ALLIANCES] Orderbook: [{"bid_price":385.0,"bid_qty":100,"ask_price":437.0,"ask_qty":20,"snapshot_time":"2026-03-10 23:18:37.626225"},{"bid_price":392.0,"bid_qty":7,"ask_price":436.5,"ask_qty":20,"snapshot_time":"2026-03-10...
+2026-03-11 21:48:33,096 - INFO - [ALLIANCES] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:48:33,100 - INFO - [ALLIANCES] News: [{"title":"Bourse de Casablanca: La correction du MASI ouvre des opportunit\u00e9s de repositionnement","published_date":"Mardi 10 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casa...
+2026-03-11 21:48:33,100 - INFO - [ALLIANCES] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:48:33,110 - INFO - [ALLIANCES] Technicals: {"symbol": "ALLIANCES", "trade_date": "2026-03-09", "close": 391.5, "sma_5": 407.93, "sma_10": 448.44, "rsi": 22.33, "macd": -24.67, "macd_signal": -13.04, "macd_histogram": -11.63, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 21:48:33,110 - INFO - [ALLIANCES] Data report length: 7165 chars
+2026-03-11 21:48:33,110 - INFO - [ALLIANCES] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:49:41,485 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:50:02,024 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:50:02,987 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:50:02,987 - INFO - [ALLIANCES] LLM Response: The structured prediction has been successfully saved for the stock **ALLIANCES**. The recommendation is to *BUY* with a **60% confidence level** based on the analysis of the recent price action, market index trends, technical indicators, and news sentiment. 
+
+Key points from the reasoning:
+- Recent RSI indicates an oversold condition.
+- Positive trend in the MASI (Market Average Index for Stock Index).
+- Positivity in recent news articles about energy markets and the overall market.
+- Balanced ...
+2026-03-11 21:50:02,988 - INFO - [ALLIANCES] Tool call: {'id': 'call_p51x6kil', 'function': {'arguments': '{"predicted_action":"BUY","resistance_price":437,"strength":8,"support_price":385,"trend":"BULLISH","predicted_move":2,"masi_trend":"BULLISH","confidence_pct":60,"reasoning":"The recent price action shows some bearish trends, but considering the oversold RSI and positive market index (MASI) trend, there could be a rebound. The recent news articles suggest calm pricing in energy markets which can positively impact stock sentiment. Additionally, the order book data indicates balanced pressure but with more bids at lower prices suggesting potential buying interest.","news_sentiment":"POSITIVE","symbol":"ALLIANCES"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:50:02,988 - INFO - [ALLIANCES] Analysis complete
+2026-03-11 21:50:02,989 - INFO - ============================================================
+2026-03-11 21:50:02,989 - INFO - STARTING ANALYSIS: ATW
+2026-03-11 21:50:02,989 - INFO - ============================================================
+2026-03-11 21:50:02,989 - INFO - [ATW] Step 1: Pre-fetching all market data...
+2026-03-11 21:50:02,989 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:50:02,996 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-09","close":667.9,"open":null,"high":690.0,"low":667.9,"volume":48497.0,"change_pct":-4.74},{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volum...
+2026-03-11 21:50:02,996 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:50:02,998 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 21:50:02,999 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:50:03,001 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:50:03,002 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:50:03,005 - INFO - [ATW] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":720.0,"ask_qty":249,"snapshot_time":"2026-03-10 23:18:43.692205"},{"bid_price":0.0,"bid_qty":0,"ask_price":715.0,"ask_qty":85,"snapshot_time":"2026-03-10 23:1...
+2026-03-11 21:50:03,005 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:50:03,008 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 21:50:03,008 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:50:03,014 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-09", "close": 667.9, "sma_5": 688.4, "sma_10": 711.98, "rsi": 21.55, "macd": -16.76, "macd_signal": -9.51, "macd_histogram": -7.25, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 21:50:03,014 - INFO - [ATW] Data report length: 7133 chars
+2026-03-11 21:50:03,014 - INFO - [ATW] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:51:15,779 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:51:31,456 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:51:32,663 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:51:32,664 - INFO - [ATW] LLM Response: Prediction saved for ATW: HOLD with a confidence level of 50.0%. The reasoning behind this recommendation is that the recent price action shows a mix of gains and losses, with the RSI indicator in the oversold region suggesting potential buying pressure. However, the current MASI index trend is bearish, which could limit upside. Based on these factors, a HOLD recommendation seems prudent until clearer trends emerge....
+2026-03-11 21:51:32,664 - INFO - [ATW] Tool call: {'id': 'call_fatapnuz', 'function': {'arguments': '{"reasoning":"The recent price action for ATW shows a mix of gains and losses over the past month, with some volatility. The RSI indicator is in the oversold region, suggesting potential buying pressure. However, the current MASI index trend is bearish, which could limit upside. Considering these factors, a HOLD recommendation seems prudent until clearer trends emerge.","trend":"NEUTRAL","predicted_move":3.5,"symbol":"ATW","confidence_pct":50,"resistance_price":760,"support_price":680,"strength":5,"masi_trend":"BEARISH","news_sentiment":"POSITIVE","predicted_action":"HOLD"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:51:32,665 - INFO - [ATW] Analysis complete
+2026-03-11 21:51:32,665 - INFO - ============================================================
+2026-03-11 21:51:32,665 - INFO - STARTING ANALYSIS: CIH
+2026-03-11 21:51:32,665 - INFO - ============================================================
+2026-03-11 21:51:32,666 - INFO - [CIH] Step 1: Pre-fetching all market data...
+2026-03-11 21:51:32,666 - INFO - [CIH] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:51:32,669 - INFO - [CIH] Stock history: [{"trade_date":"2026-03-09","close":374.0,"open":null,"high":383.0,"low":367.0,"volume":2340.0,"change_pct":-1.58},{"trade_date":"2026-03-06","close":380.0,"open":null,"high":392.8,"low":374.0,"volume...
+2026-03-11 21:51:32,669 - INFO - [CIH] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:51:32,678 - INFO - [CIH] Historical trend: {"symbol": "CIH", "timeframe": "weekly", "data_points": 52, "52w_high": 442.05, "52w_low": 380.0, "avg_price": 414.7, "current_vs_52w_high_pct": -14.04, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 21:51:32,678 - INFO - [CIH] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:51:32,681 - INFO - [CIH] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:51:32,681 - INFO - [CIH] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:51:32,684 - INFO - [CIH] Orderbook: [{"bid_price":346.0,"bid_qty":36,"ask_price":406.9,"ask_qty":210,"snapshot_time":"2026-03-10 23:18:51.087754"},{"bid_price":349.6,"bid_qty":3,"ask_price":400.0,"ask_qty":397,"snapshot_time":"2026-03-1...
+2026-03-11 21:51:32,685 - INFO - [CIH] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:51:32,688 - INFO - [CIH] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 21:51:32,689 - INFO - [CIH] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:51:32,695 - INFO - [CIH] Technicals: {"symbol": "CIH", "trade_date": "2026-03-09", "close": 374.0, "sma_5": 367.16, "sma_10": 381.38, "rsi": 36.75, "macd": -7.81, "macd_signal": -5.02, "macd_histogram": -2.79, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 21:51:32,695 - INFO - [CIH] Data report length: 7130 chars
+2026-03-11 21:51:32,695 - INFO - [CIH] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:52:47,762 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:53:06,531 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:53:07,565 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:53:07,566 - INFO - [CIH] LLM Response: The prediction for CIH has been saved with a recommended action of **SELL**. The confidence level is at 75.0%. According to the analysis, while there are some positive trends in the MASI index, the stock CIH is showing signs of a bearish trend and approaching its 52-week high negatively. Additionally, the order book data suggests sell pressure, which supports the selling recommendation....
+2026-03-11 21:53:07,566 - INFO - [CIH] Tool call: {'id': 'call_40951l50', 'function': {'arguments': '{"confidence_pct":75,"resistance_price":380,"strength":6,"trend":"BEARISH","news_sentiment":"POSITIVE","symbol":"CIH","predicted_action":"SELL","reasoning":"The stock has been showing signs of a bearish trend with recent prices indicating a decline from its peak. Despite the positive news surrounding the MASI index rebound, CIH is currently under pressure due to its 52-week high being approached negatively and orderbook data suggesting sell pressure.","support_price":367,"predicted_move":-3.9,"masi_trend":"BULLISH"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:53:07,567 - INFO - [CIH] Analysis complete
+2026-03-11 21:53:07,567 - INFO - ============================================================
+2026-03-11 21:53:07,568 - INFO - STARTING ANALYSIS: IAM
+2026-03-11 21:53:07,568 - INFO - ============================================================
+2026-03-11 21:53:07,568 - INFO - [IAM] Step 1: Pre-fetching all market data...
+2026-03-11 21:53:07,568 - INFO - [IAM] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:53:07,572 - INFO - [IAM] Stock history: [{"trade_date":"2026-03-09","close":90.0,"open":null,"high":92.0,"low":90.0,"volume":164310.0,"change_pct":-2.71},{"trade_date":"2026-03-06","close":92.51,"open":null,"high":94.97,"low":92.5,"volume":...
+2026-03-11 21:53:07,572 - INFO - [IAM] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:53:07,577 - INFO - [IAM] Historical trend: {"symbol": "IAM", "timeframe": "weekly", "data_points": 52, "52w_high": 126.5, "52w_low": 92.51, "avg_price": 113.75, "current_vs_52w_high_pct": -26.87, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 21:53:07,577 - INFO - [IAM] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:53:07,580 - INFO - [IAM] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:53:07,581 - INFO - [IAM] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:53:07,584 - INFO - [IAM] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":96.5,"ask_qty":500,"snapshot_time":"2026-03-10 23:19:04.874357"},{"bid_price":0.0,"bid_qty":0,"ask_price":96.3,"ask_qty":1200,"snapshot_time":"2026-03-10 23:1...
+2026-03-11 21:53:07,584 - INFO - [IAM] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:53:07,588 - INFO - [IAM] News: [{"title":"Bourse de Casablanca: La correction du MASI ouvre des opportunit\u00e9s de repositionnement","published_date":"Mardi 10 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casa...
+2026-03-11 21:53:07,589 - INFO - [IAM] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:53:07,598 - INFO - [IAM] Technicals: {"symbol": "IAM", "trade_date": "2026-03-09", "close": 90.0, "sma_5": 92.0, "sma_10": 96.21, "rsi": 7.94, "macd": -3.7, "macd_signal": -2.44, "macd_histogram": -1.26, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 21:53:07,598 - INFO - [IAM] Data report length: 7107 chars
+2026-03-11 21:53:07,598 - INFO - [IAM] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:54:24,576 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:54:47,381 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:54:48,593 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:54:48,594 - INFO - [IAM] LLM Response: Prediction saved for IAM: BUY (confidence: 85.0%).
+
+The reasoning behind the 'BUY' action is as follows:
+- The recent price action indicates a downtrend, but recent news articles show positive sentiment.
+- Technical indicators like MACD and RSI suggest potential momentum in an uptrend.
+- There's balanced trading pressure observed in the order book, which might indicate market uncertainty but also a buying opportunity given the recent downward trend.
+
+This structured prediction has been saved wit...
+2026-03-11 21:54:48,595 - INFO - [IAM] Tool call: {'id': 'call_xvt7edw6', 'function': {'arguments': '{"reasoning":"The recent price action shows the stock has been trending downwards over the last few days but is starting to recover with some positive sentiment from news articles. The MACD and RSI indicators are bearish, suggesting a potential uptrend if the momentum picks up. Additionally, there\'s balanced trading pressure in the order book which indicates market uncertainty, but given the recent downtrend, it could signal a buying opportunity.","strength":7,"support_price":87,"predicted_action":"BUY","resistance_price":96.5,"trend":"BULLISH","masi_trend":"BEARISH","news_sentiment":"POSITIVE","symbol":"IAM","confidence_pct":85}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:54:48,595 - INFO - [IAM] Analysis complete
+2026-03-11 21:54:48,596 - INFO - ============================================================
+2026-03-11 21:54:48,596 - INFO - STARTING ANALYSIS: JET CONTRACTORS
+2026-03-11 21:54:48,596 - INFO - ============================================================
+2026-03-11 21:54:48,596 - INFO - [JET CONTRACTORS] Step 1: Pre-fetching all market data...
+2026-03-11 21:54:48,596 - INFO - [JET CONTRACTORS] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:54:48,601 - INFO - [JET CONTRACTORS] Stock history: [{"trade_date":"2026-03-09","close":2005.0,"open":null,"high":2088.0,"low":2003.0,"volume":7081.0,"change_pct":-8.45},{"trade_date":"2026-03-06","close":2190.0,"open":null,"high":2375.0,"low":2190.0,"...
+2026-03-11 21:54:48,601 - INFO - [JET CONTRACTORS] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:54:48,605 - INFO - [JET CONTRACTORS] Historical trend: {"symbol": "JET CONTRACTORS", "timeframe": "weekly", "data_points": 52, "52w_high": 2833.0, "52w_low": 1939.0, "avg_price": 2415.23, "current_vs_52w_high_pct": -22.7, "recent_prices": [{"trade_date": ...
+2026-03-11 21:54:48,606 - INFO - [JET CONTRACTORS] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:54:48,608 - INFO - [JET CONTRACTORS] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:54:48,609 - INFO - [JET CONTRACTORS] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:54:48,613 - INFO - [JET CONTRACTORS] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":0.0,"ask_qty":0,"snapshot_time":"2026-03-10 23:19:11.314470"},{"bid_price":0.0,"bid_qty":0,"ask_price":0.0,"ask_qty":0,"snapshot_time":"2026-03-10 23:19:11.31...
+2026-03-11 21:54:48,613 - INFO - [JET CONTRACTORS] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:54:48,618 - INFO - [JET CONTRACTORS] News: [{"title":"Bourse de Casablanca: La correction du MASI ouvre des opportunit\u00e9s de repositionnement","published_date":"Mardi 10 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casa...
+2026-03-11 21:54:48,618 - INFO - [JET CONTRACTORS] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:54:48,631 - INFO - [JET CONTRACTORS] Technicals: {"symbol": "JET CONTRACTORS", "trade_date": "2026-03-09", "close": 2005.0, "sma_5": 2159.2, "sma_10": 2375.2, "rsi": 18.39, "macd": -132.24, "macd_signal": -69.03, "macd_histogram": -63.21, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 21:54:48,631 - INFO - [JET CONTRACTORS] Data report length: 7151 chars
+2026-03-11 21:54:48,631 - INFO - [JET CONTRACTORS] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:56:17,388 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:56:44,946 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:56:45,992 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:56:45,993 - INFO - [JET CONTRACTORS] LLM Response: The structured prediction for **JET CONTRACTORS** has been successfully saved with the following details:
+
+- **Predicted Action:** Buy
+- **Confidence Level:** 70%
+- **Reasoning:** The recent close of JET CONTRACTORS' price has decreased from its highs due to a correction in the overall market. However, the stock is currently oversold as indicated by RSI at 18.39, which strongly suggests a rebound might be imminent. Additionally, despite a bearish trend seen in simple moving averages (SMA), the n...
+2026-03-11 21:56:45,993 - INFO - [JET CONTRACTORS] Tool call: {'id': 'call_fvru66ow', 'function': {'arguments': '{"strength":7,"symbol":"JET Contractors","predicted_action":"BUY","confidence_pct":70,"reasoning":"The recent close of JET CONTRACTORS price has decreased from its highs due to a correction in the overall market. However, the stock is currently oversold as indicated by RSI at 18.39, which strongly suggests a rebound might be imminent. Additionally, despite a bearish trend seen in simple moving averages (SMA), the near-term sentiment provided by MACD also points towards potential bullish movement with positive divergence expected.","news_sentiment":"POSITIVE","orderbook_bias":"BUY_PRESSURE","support_price":1980,"trend":"BEARISH","masi_trend":"BULLISH","predicted_move":3.5,"resistance_price":2060}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:56:45,994 - INFO - [JET CONTRACTORS] Analysis complete
+2026-03-11 21:56:45,994 - INFO - ============================================================
+2026-03-11 21:56:45,994 - INFO - STARTING ANALYSIS: SGTM
+2026-03-11 21:56:45,994 - INFO - ============================================================
+2026-03-11 21:56:45,995 - INFO - [SGTM] Step 1: Pre-fetching all market data...
+2026-03-11 21:56:45,995 - INFO - [SGTM] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:56:45,999 - INFO - [SGTM] Stock history: [{"trade_date":"2026-03-09","close":700.0,"open":null,"high":715.0,"low":695.0,"volume":25355.0,"change_pct":-4.11},{"trade_date":"2026-03-06","close":730.0,"open":null,"high":764.0,"low":720.0,"volum...
+2026-03-11 21:56:45,999 - INFO - [SGTM] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:56:46,003 - INFO - [SGTM] Historical trend: {"symbol": "SGTM", "timeframe": "weekly", "data_points": 11, "52w_high": 940.0, "52w_low": 730.0, "avg_price": 845.44, "current_vs_52w_high_pct": -22.34, "recent_prices": [{"trade_date": "2026-03-01",...
+2026-03-11 21:56:46,003 - INFO - [SGTM] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:56:46,005 - INFO - [SGTM] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:56:46,005 - INFO - [SGTM] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:56:46,009 - INFO - [SGTM] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":0.0,"ask_qty":0,"snapshot_time":"2026-03-10 23:19:17.469531"},{"bid_price":0.0,"bid_qty":0,"ask_price":0.0,"ask_qty":0,"snapshot_time":"2026-03-10 23:19:17.46...
+2026-03-11 21:56:46,009 - INFO - [SGTM] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:56:46,012 - INFO - [SGTM] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 21:56:46,013 - INFO - [SGTM] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:56:46,020 - INFO - [SGTM] Technicals: {"symbol": "SGTM", "trade_date": "2026-03-09", "close": 700.0, "sma_5": 715.02, "sma_10": 763.51, "rsi": 23.58, "macd": -33.11, "macd_signal": -20.77, "macd_histogram": -12.34, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 21:56:46,020 - INFO - [SGTM] Data report length: 7128 chars
+2026-03-11 21:56:46,020 - INFO - [SGTM] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:58:05,576 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:58:27,167 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:58:28,173 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:58:28,174 - INFO - [SGTM] LLM Response: The prediction has been successfully saved for the stock **SGTM** with a recommended action of **BUY** based on the provided market data and analysis. The confidence level is at **87.0%**, indicating a high degree of certainty in this recommendation.
+
+Key highlights from the reasoning:
+- Overbought RSI suggesting oversold conditions might reverse.
+- Bullish trend in the MASI index.
+- Positive news articles that indicate potential for repositioning.
+- Orderbook showing some selling pressure, but ...
+2026-03-11 21:58:28,174 - INFO - [SGTM] Tool call: {'id': 'call_ur3ii6cj', 'function': {'arguments': '{"predicted_move":5,"reasoning":"Despite the recent pullback in SGTM\'s share price following a strong correction after the rally, there are currently positive technical indicators like oversold RSI and bearish MACD, suggesting that the downward momentum may be easing. Additionally, the MASI index is showing a bullish trend, and news articles suggest potential opportunities for repositioning on the market. The orderbook bias towards selling pressures could indicate a pause in the upward movement but not necessarily a shift to bearish sentiment.","resistance_price":750,"strength":6,"predicted_action":"BUY","confidence_pct":87,"support_price":690,"trend":"BULLISH","symbol":"SGTM","masi_trend":"BULLISH","news_sentiment":"POSITIVE","orderbook_bias":"SELL_PRESSURE"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 21:58:28,175 - INFO - [SGTM] Analysis complete
+2026-03-11 21:58:28,176 - INFO - ============================================================
+2026-03-11 21:58:28,176 - INFO - STARTING ANALYSIS: SODEP
+2026-03-11 21:58:28,176 - INFO - ============================================================
+2026-03-11 21:58:28,176 - INFO - [SODEP] Step 1: Pre-fetching all market data...
+2026-03-11 21:58:28,176 - INFO - [SODEP] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:58:28,179 - INFO - [SODEP] Stock history: [{"trade_date":"2026-03-09","close":740.0,"open":null,"high":760.0,"low":740.0,"volume":23181.0,"change_pct":-2.63},{"trade_date":"2026-03-06","close":760.0,"open":null,"high":788.0,"low":756.0,"volum...
+2026-03-11 21:58:28,180 - INFO - [SODEP] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:58:28,183 - INFO - [SODEP] Historical trend: {"symbol": "SODEP", "timeframe": "weekly", "data_points": 52, "52w_high": 1001.0, "52w_low": 670.0, "avg_price": 883.78, "current_vs_52w_high_pct": -24.08, "recent_prices": [{"trade_date": "2026-03-01...
+2026-03-11 21:58:28,183 - INFO - [SODEP] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:58:28,188 - INFO - [SODEP] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:58:28,189 - INFO - [SODEP] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:58:28,193 - INFO - [SODEP] Orderbook: [{"bid_price":0.0,"bid_qty":0,"ask_price":829.0,"ask_qty":12,"snapshot_time":"2026-03-10 23:19:23.389834"},{"bid_price":0.0,"bid_qty":0,"ask_price":810.0,"ask_qty":15,"snapshot_time":"2026-03-10 23:19...
+2026-03-11 21:58:28,193 - INFO - [SODEP] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:58:28,197 - INFO - [SODEP] News: [{"title":"Bourse de Casablanca: La correction du MASI ouvre des opportunit\u00e9s de repositionnement","published_date":"Mardi 10 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casa...
+2026-03-11 21:58:28,198 - INFO - [SODEP] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:58:28,204 - INFO - [SODEP] Technicals: {"symbol": "SODEP", "trade_date": "2026-03-09", "close": 740.0, "sma_5": 735.4, "sma_10": 793.9, "rsi": 20.13, "macd": -44.38, "macd_signal": -29.37, "macd_histogram": -15.01, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 21:58:28,204 - INFO - [SODEP] Data report length: 7070 chars
+2026-03-11 21:58:28,205 - INFO - [SODEP] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 21:59:39,707 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 21:59:40,681 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 21:59:40,682 - INFO - [SODEP] LLM Response: leton
+{"name": "save_prediction", "arguments": {"symbol": "SODEP", "predicted_action": "SELL", "confidence_pct": 75, "reasoning": "The recent price trends show a bearish pattern, with several consecutive days of decline. Additionally, the RSI indicates an oversold condition, which often precedes a sell signal in this market context.", "masi_trend": "BEARISH", "news_sentiment": "NEUTRAL", "orderbook_bias": "SELL_PRESSURE", "predicted_move": -2.86, "resistance_price": 750.0, "strength": 8, "suppor...
+2026-03-11 21:59:40,682 - INFO - [SODEP] Analysis complete
+2026-03-11 21:59:40,683 - INFO - ============================================================
+2026-03-11 21:59:40,683 - INFO - STARTING ANALYSIS: TAQA
+2026-03-11 21:59:40,683 - INFO - ============================================================
+2026-03-11 21:59:40,683 - INFO - [TAQA] Step 1: Pre-fetching all market data...
+2026-03-11 21:59:40,684 - INFO - [TAQA] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 21:59:40,687 - INFO - [TAQA] Stock history: [{"trade_date":"2026-03-09","close":1790.0,"open":null,"high":1810.0,"low":1750.0,"volume":686.0,"change_pct":-0.56},{"trade_date":"2026-03-06","close":1800.0,"open":null,"high":1920.0,"low":1799.0,"v...
+2026-03-11 21:59:40,687 - INFO - [TAQA] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 21:59:40,696 - INFO - [TAQA] Historical trend: {"symbol": "TAQA", "timeframe": "weekly", "data_points": 52, "52w_high": 3090.0, "52w_low": 1640.0, "avg_price": 2454.12, "current_vs_52w_high_pct": -41.75, "recent_prices": [{"trade_date": "2026-03-0...
+2026-03-11 21:59:40,696 - INFO - [TAQA] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 21:59:40,698 - INFO - [TAQA] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 21:59:40,699 - INFO - [TAQA] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 21:59:40,701 - INFO - [TAQA] Orderbook: [{"bid_price":1700.0,"bid_qty":122,"ask_price":1920.0,"ask_qty":379,"snapshot_time":"2026-03-10 23:19:29.535869"},{"bid_price":1703.0,"bid_qty":1,"ask_price":1919.0,"ask_qty":395,"snapshot_time":"2026...
+2026-03-11 21:59:40,702 - INFO - [TAQA] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 21:59:40,705 - INFO - [TAQA] News: [{"title":"Bourse de Casablanca : le MASI rebondit de 2,23% apr\u00e8s l\u2019accalmie des prix de l\u2019\u00e9nergie","published_date":"Mardi 10 Mars 2026 - PAR","source_name":"boursenews"},{"title"...
+2026-03-11 21:59:40,706 - INFO - [TAQA] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 21:59:40,712 - INFO - [TAQA] Technicals: {"symbol": "TAQA", "trade_date": "2026-03-09", "close": 1790.0, "sma_5": 1746.4, "sma_10": 1811.0, "rsi": 34.38, "macd": -56.28, "macd_signal": -43.52, "macd_histogram": -12.76, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 21:59:40,713 - INFO - [TAQA] Data report length: 7206 chars
+2026-03-11 21:59:40,713 - INFO - [TAQA] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 22:00:52,235 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:01:18,546 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:01:19,550 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:01:19,551 - INFO - [TAQA] LLM Response: The structured prediction for TAQA has been successfully saved with the following details:
+
+- **Predicted Action:** HOLD
+- **Confidence Level:** 53.0%
+- **Reasoning:** Recent close price has decreased by -0.56%, with a Bearish trend according to SMAs compared to week-on-week data from the MASI index pointing towards bearish sentiment. However, order book shows slightly more buying pressure. News articles show mixed signals—some suggest improvement but others caution about reversions. Overall, gi...
+2026-03-11 22:01:19,552 - INFO - [TAQA] Tool call: {'id': 'call_6mbu3di5', 'function': {'arguments': '{"resistance_price":1920,"strength":6,"support_price":1700,"confidence_pct":53,"reasoning":"Recent close price has decreased by -0.56%, with a Bearish trend according to SMAs compared to week-on-week data from the MASI index pointing towards bearish sentiment. However, order book shows slightly more buying pressure. News articles show mixed signals—some suggest improvement but others caution about reversions. Overall, given the current price and support level at ~1700., a HOLD action is recommended.","trend":"BEARISH","predicted_move":-5.4,"symbol":"TAQA","predicted_action":"HOLD"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 22:01:19,552 - INFO - [TAQA] Analysis complete
+2026-03-11 22:01:19,553 - INFO - ============================================================
+2026-03-11 22:01:19,553 - INFO - STARTING ANALYSIS: TGCC
+2026-03-11 22:01:19,553 - INFO - ============================================================
+2026-03-11 22:01:19,553 - INFO - [TGCC] Step 1: Pre-fetching all market data...
+2026-03-11 22:01:19,553 - INFO - [TGCC] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:01:19,556 - INFO - [TGCC] Stock history: [{"trade_date":"2026-03-09","close":695.0,"open":null,"high":700.0,"low":690.0,"volume":33992.0,"change_pct":-3.47},{"trade_date":"2026-03-06","close":720.0,"open":null,"high":764.0,"low":720.0,"volum...
+2026-03-11 22:01:19,557 - INFO - [TGCC] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:01:19,563 - INFO - [TGCC] Historical trend: {"symbol": "TGCC", "timeframe": "weekly", "data_points": 52, "52w_high": 1082.0, "52w_low": 635.2, "avg_price": 880.84, "current_vs_52w_high_pct": -33.46, "recent_prices": [{"trade_date": "2026-03-01"...
+2026-03-11 22:01:19,563 - INFO - [TGCC] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:01:19,565 - INFO - [TGCC] MASI data: [{"trade_date":"2026-03-10","close_price":16902.46,"change_pct":2.23},{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct...
+2026-03-11 22:01:19,565 - INFO - [TGCC] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:01:19,569 - INFO - [TGCC] Orderbook: [{"bid_price":699.0,"bid_qty":62,"ask_price":745.0,"ask_qty":15,"snapshot_time":"2026-03-10 23:19:35.725996"},{"bid_price":700.0,"bid_qty":1538,"ask_price":744.0,"ask_qty":10,"snapshot_time":"2026-03-...
+2026-03-11 22:01:19,569 - INFO - [TGCC] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:01:19,573 - INFO - [TGCC] News: [{"title":"Bourse de Casablanca : le MASI rebondit de 2,23% apr\u00e8s l\u2019accalmie des prix de l\u2019\u00e9nergie","published_date":"Mardi 10 Mars 2026 - PAR","source_name":"boursenews"},{"title"...
+2026-03-11 22:01:19,574 - INFO - [TGCC] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:01:19,581 - INFO - [TGCC] Technicals: {"symbol": "TGCC", "trade_date": "2026-03-09", "close": 695.0, "sma_5": 704.2, "sma_10": 750.45, "rsi": 24.28, "macd": -36.59, "macd_signal": -24.18, "macd_histogram": -12.41, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:01:19,581 - INFO - [TGCC] Data report length: 7155 chars
+2026-03-11 22:01:19,581 - INFO - [TGCC] Step 2: Sending data to qwen2.5:7b for analysis...
+2026-03-11 22:02:39,980 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:03:14,076 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:03:15,144 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:03:15,145 - INFO - [TGCC] LLM Response: The structured prediction has been successfully saved for **TGCC** with the action to *BUY* (confidence: 70.0%). The reasoning behind this prediction is based on the current bullish trend of the MASI index, positive news sentiment, and oversold conditions indicated by RSI. However, bearish divergence between SMA_5 and SMA_10 remains a concern but provides potential buying opportunities given recent price drops.
+
+Here’s a summary:
+- **Recommended Action**: BUY
+- **Confidence Level**: 70%
+- **Reas...
+2026-03-11 22:03:15,145 - INFO - [TGCC] Tool call: {'id': 'call_550q0ch1', 'function': {'arguments': '{"confidence_pct":70,"reasoning":"Although the short-term close prices have shown a few downswings, the MASI index is currently experiencing a bullish trend. This could potentially lead to more positive sentiment towards TGCC stocks. Additionally, while the RSI indicates oversold conditions and suggests potential buying opportunities, the bearish divergence between SMA_5 and SMA_10 (indicating a bearish bias) remains concerning. However, the recent drop in prices might provide attractive entry points for investors.","support_price":690,"trend":"BEARISH","news_sentiment":"POSITIVE","orderbook_bias":"BUY_PRESSURE","resistance_price":728,"strength":6,"masi_trend":"BULLISH","symbol":"TGCC","predicted_action":"BUY"}', 'name': 'save_prediction'}, 'type': 'function', 'index': 0}
+2026-03-11 22:03:15,146 - INFO - [TGCC] Analysis complete
+2026-03-11 22:21:51,677 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:21:51,757 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-05","close":708.0,"open":null,"high":708.0,"low":700.0,"volume":111544.0,"change_pct":3.36},{"trade_date":"2026-03-04","close":685.0,"open":null,"high":720.0,"low":685.0,"volum...
+2026-03-11 22:21:51,757 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:21:51,779 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:21:51,780 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:21:51,784 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-05","close_price":17351.61,"change_pct":4.18},{"trade_date":"2026-03-04","close_price":16655.58,"change_pct":1.56},{"trade_date":"2026-03-03","close_price":16399.25,"change_pct...
+2026-03-11 22:21:51,784 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:21:51,795 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:21:51,795 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:21:51,883 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:21:51,883 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:21:52,079 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-05", "close": 708.0, "sma_5": 701.78, "sma_10": 726.58, "rsi": 32.2, "macd": -12.97, "macd_signal": -6.19, "macd_histogram": -6.77, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 22:23:30,741 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:23:46,847 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:23:48,511 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:23:48,557 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:23:48,852 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volume":121728.0,"change_pct":-0.97},{"trade_date":"2026-03-05","close":708.0,"open":null,"high":708.0,"low":700.0,"volu...
+2026-03-11 22:23:48,854 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:23:48,903 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:23:48,903 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:23:48,908 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-06","close_price":17097.54,"change_pct":-1.46},{"trade_date":"2026-03-05","close_price":17351.61,"change_pct":4.18},{"trade_date":"2026-03-04","close_price":16655.58,"change_pc...
+2026-03-11 22:23:48,908 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:23:48,924 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:23:48,924 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:23:48,959 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:23:48,960 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:23:49,052 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-06", "close": 701.1, "sma_5": 696.8, "sma_10": 720.69, "rsi": 27.52, "macd": -13.7, "macd_signal": -7.69, "macd_histogram": -6.0, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:25:00,010 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:25:24,579 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:25:25,912 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:25:25,950 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:25:26,107 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-09","close":667.9,"open":null,"high":690.0,"low":667.9,"volume":48497.0,"change_pct":-4.74},{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volum...
+2026-03-11 22:25:26,108 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:25:26,135 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:25:26,135 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:25:26,141 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct":-1.46},{"trade_date":"2026-03-05","close_price":17351.61,"change_pc...
+2026-03-11 22:25:26,142 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:25:26,150 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:25:26,150 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:25:26,177 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:25:26,178 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:25:26,232 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-09", "close": 667.9, "sma_5": 688.4, "sma_10": 711.98, "rsi": 21.55, "macd": -16.76, "macd_signal": -9.51, "macd_histogram": -7.25, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:26:30,149 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:26:47,345 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:26:48,824 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:27:04,574 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:27:04,638 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-03","close":680.0,"open":null,"high":710.0,"low":671.0,"volume":279086.0,"change_pct":-4.21},{"trade_date":"2026-03-02","close":709.9,"open":null,"high":719.0,"low":700.0,"volu...
+2026-03-11 22:27:04,638 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:27:04,648 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:27:04,649 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:27:04,652 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-03","close_price":16399.25,"change_pct":-5.63},{"trade_date":"2026-03-02","close_price":17377.0,"change_pct":-4.21},{"trade_date":"2026-02-27","close_price":18140.55,"change_pc...
+2026-03-11 22:27:04,652 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:27:04,657 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:27:04,658 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:27:04,719 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:27:04,719 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:27:04,787 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-03", "close": 680.0, "sma_5": 720.78, "sma_10": 738.81, "rsi": null, "macd": -9.49, "macd_signal": -2.49, "macd_histogram": -7.01, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 22:28:12,789 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:28:42,730 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:29:35,123 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:30:52,642 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:33:25,075 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:33:28,297 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:33:28,517 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:33:28,737 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-04","close":685.0,"open":null,"high":720.0,"low":685.0,"volume":187967.0,"change_pct":0.74},{"trade_date":"2026-03-03","close":680.0,"open":null,"high":710.0,"low":671.0,"volum...
+2026-03-11 22:33:28,738 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:33:28,846 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:33:28,847 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:33:28,860 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-04","close_price":16655.58,"change_pct":1.56},{"trade_date":"2026-03-03","close_price":16399.25,"change_pct":-5.63},{"trade_date":"2026-03-02","close_price":17377.0,"change_pct...
+2026-03-11 22:33:28,860 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:33:28,892 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:33:28,892 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:33:28,965 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:33:28,966 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:33:29,115 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-04", "close": 685.0, "sma_5": 707.98, "sma_10": 731.78, "rsi": 15.79, "macd": -12.55, "macd_signal": -4.5, "macd_histogram": -8.05, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:34:36,829 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:34:51,361 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:34:52,736 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:34:52,773 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:34:53,001 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-05","close":708.0,"open":null,"high":708.0,"low":700.0,"volume":111544.0,"change_pct":3.36},{"trade_date":"2026-03-04","close":685.0,"open":null,"high":720.0,"low":685.0,"volum...
+2026-03-11 22:34:53,002 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:34:53,046 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:34:53,047 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:34:53,052 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-05","close_price":17351.61,"change_pct":4.18},{"trade_date":"2026-03-04","close_price":16655.58,"change_pct":1.56},{"trade_date":"2026-03-03","close_price":16399.25,"change_pct...
+2026-03-11 22:34:53,052 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:34:53,070 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:34:53,071 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:34:53,096 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:34:53,097 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:34:53,176 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-05", "close": 708.0, "sma_5": 701.78, "sma_10": 726.58, "rsi": 32.2, "macd": -12.97, "macd_signal": -6.19, "macd_histogram": -6.77, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 22:36:02,630 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:36:35,582 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:36:37,656 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:36:37,950 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:36:38,809 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volume":121728.0,"change_pct":-0.97},{"trade_date":"2026-03-05","close":708.0,"open":null,"high":708.0,"low":700.0,"volu...
+2026-03-11 22:36:38,809 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:36:38,908 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:36:38,908 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:36:38,920 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-06","close_price":17097.54,"change_pct":-1.46},{"trade_date":"2026-03-05","close_price":17351.61,"change_pct":4.18},{"trade_date":"2026-03-04","close_price":16655.58,"change_pc...
+2026-03-11 22:36:38,920 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:36:38,949 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:36:38,950 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:36:38,997 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:36:38,997 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:36:39,123 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-06", "close": 701.1, "sma_5": 696.8, "sma_10": 720.69, "rsi": 27.52, "macd": -13.7, "macd_signal": -7.69, "macd_histogram": -6.0, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:37:40,623 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:38:04,232 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:38:05,723 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:38:05,820 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:38:06,036 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-09","close":667.9,"open":null,"high":690.0,"low":667.9,"volume":48497.0,"change_pct":-4.74},{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volum...
+2026-03-11 22:38:06,036 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:38:06,080 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:38:06,081 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:38:06,086 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct":-1.46},{"trade_date":"2026-03-05","close_price":17351.61,"change_pc...
+2026-03-11 22:38:06,086 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:38:06,121 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:38:06,121 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:38:06,152 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:38:06,152 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:38:06,208 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-09", "close": 667.9, "sma_5": 688.4, "sma_10": 711.98, "rsi": 21.55, "macd": -16.76, "macd_signal": -9.51, "macd_histogram": -7.25, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:39:16,286 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:39:49,569 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:39:51,436 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:40:30,136 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:40:30,231 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-03","close":680.0,"open":null,"high":710.0,"low":671.0,"volume":279086.0,"change_pct":-4.21},{"trade_date":"2026-03-02","close":709.9,"open":null,"high":719.0,"low":700.0,"volu...
+2026-03-11 22:40:30,231 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:40:30,247 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:40:30,247 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:40:30,253 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-03","close_price":16399.25,"change_pct":-5.63},{"trade_date":"2026-03-02","close_price":17377.0,"change_pct":-4.21},{"trade_date":"2026-02-27","close_price":18140.55,"change_pc...
+2026-03-11 22:40:30,254 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:40:30,262 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:40:30,262 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:40:30,356 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:40:30,356 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:40:30,433 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-03", "close": 680.0, "sma_5": 720.78, "sma_10": 738.81, "rsi": null, "macd": -9.49, "macd_signal": -2.49, "macd_histogram": -7.01, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 22:41:42,718 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:42:08,655 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:42:10,763 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:42:10,810 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:42:11,064 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-04","close":685.0,"open":null,"high":720.0,"low":685.0,"volume":187967.0,"change_pct":0.74},{"trade_date":"2026-03-03","close":680.0,"open":null,"high":710.0,"low":671.0,"volum...
+2026-03-11 22:42:11,064 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:42:11,119 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:42:11,120 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:42:11,126 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-04","close_price":16655.58,"change_pct":1.56},{"trade_date":"2026-03-03","close_price":16399.25,"change_pct":-5.63},{"trade_date":"2026-03-02","close_price":17377.0,"change_pct...
+2026-03-11 22:42:11,127 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:42:11,145 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:42:11,145 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:42:11,195 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:42:11,196 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:42:11,268 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-04", "close": 685.0, "sma_5": 707.98, "sma_10": 731.78, "rsi": 15.79, "macd": -12.55, "macd_signal": -4.5, "macd_histogram": -8.05, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:43:02,529 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:43:21,246 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:43:22,588 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:43:22,683 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:43:22,859 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-05","close":708.0,"open":null,"high":708.0,"low":700.0,"volume":111544.0,"change_pct":3.36},{"trade_date":"2026-03-04","close":685.0,"open":null,"high":720.0,"low":685.0,"volum...
+2026-03-11 22:43:22,859 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:43:22,894 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:43:22,894 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:43:22,900 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-05","close_price":17351.61,"change_pct":4.18},{"trade_date":"2026-03-04","close_price":16655.58,"change_pct":1.56},{"trade_date":"2026-03-03","close_price":16399.25,"change_pct...
+2026-03-11 22:43:22,900 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:43:22,911 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:43:22,911 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:43:22,934 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:43:22,935 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:43:22,979 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-05", "close": 708.0, "sma_5": 701.78, "sma_10": 726.58, "rsi": 32.2, "macd": -12.97, "macd_signal": -6.19, "macd_histogram": -6.77, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 22:44:35,896 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:44:55,934 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:44:58,168 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:44:58,255 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:44:58,527 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volume":121728.0,"change_pct":-0.97},{"trade_date":"2026-03-05","close":708.0,"open":null,"high":708.0,"low":700.0,"volu...
+2026-03-11 22:44:58,527 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:44:58,571 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:44:58,571 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:44:58,607 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-06","close_price":17097.54,"change_pct":-1.46},{"trade_date":"2026-03-05","close_price":17351.61,"change_pct":4.18},{"trade_date":"2026-03-04","close_price":16655.58,"change_pc...
+2026-03-11 22:44:58,607 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:44:58,622 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:44:58,622 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:44:58,648 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:44:58,649 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:44:58,701 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-06", "close": 701.1, "sma_5": 696.8, "sma_10": 720.69, "rsi": 27.52, "macd": -13.7, "macd_signal": -7.69, "macd_histogram": -6.0, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:46:20,290 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:46:22,174 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:46:22,235 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:46:22,299 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-09","close":667.9,"open":null,"high":690.0,"low":667.9,"volume":48497.0,"change_pct":-4.74},{"trade_date":"2026-03-06","close":701.1,"open":null,"high":724.9,"low":701.1,"volum...
+2026-03-11 22:46:22,300 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:46:22,316 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:46:22,316 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:46:22,319 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-09","close_price":16533.57,"change_pct":-3.3},{"trade_date":"2026-03-06","close_price":17097.54,"change_pct":-1.46},{"trade_date":"2026-03-05","close_price":17351.61,"change_pc...
+2026-03-11 22:46:22,320 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:46:22,325 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:46:22,325 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:46:22,336 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:46:22,337 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:46:22,360 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-09", "close": 667.9, "sma_5": 688.4, "sma_10": 711.98, "rsi": 21.55, "macd": -16.76, "macd_signal": -9.51, "macd_histogram": -7.25, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:48:48,087 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:49:36,977 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:49:37,080 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-03","close":680.0,"open":null,"high":710.0,"low":671.0,"volume":279086.0,"change_pct":-4.21},{"trade_date":"2026-03-02","close":709.9,"open":null,"high":719.0,"low":700.0,"volu...
+2026-03-11 22:49:37,081 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:49:37,117 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:49:37,119 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:49:37,134 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-03","close_price":16399.25,"change_pct":-5.63},{"trade_date":"2026-03-02","close_price":17377.0,"change_pct":-4.21},{"trade_date":"2026-02-27","close_price":18140.55,"change_pc...
+2026-03-11 22:49:37,134 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:49:37,145 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:49:37,145 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:49:37,268 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:49:37,268 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:49:37,375 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-03", "close": 680.0, "sma_5": 720.78, "sma_10": 738.81, "rsi": null, "macd": -9.49, "macd_signal": -2.49, "macd_histogram": -7.01, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}
+2026-03-11 22:50:02,562 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:51:25,866 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:51:50,139 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:52:47,232 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:52:49,839 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:52:50,003 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:52:50,230 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-04","close":685.0,"open":null,"high":720.0,"low":685.0,"volume":187967.0,"change_pct":0.74},{"trade_date":"2026-03-03","close":680.0,"open":null,"high":710.0,"low":671.0,"volum...
+2026-03-11 22:52:50,230 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:52:50,272 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:52:50,273 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:52:50,281 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-04","close_price":16655.58,"change_pct":1.56},{"trade_date":"2026-03-03","close_price":16399.25,"change_pct":-5.63},{"trade_date":"2026-03-02","close_price":17377.0,"change_pct...
+2026-03-11 22:52:50,282 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:52:50,297 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:52:50,297 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:52:50,345 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:52:50,345 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:52:50,419 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-04", "close": 685.0, "sma_5": 707.98, "sma_10": 731.78, "rsi": 15.79, "macd": -12.55, "macd_signal": -4.5, "macd_histogram": -8.05, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "OVERSOLD"}
+2026-03-11 22:53:20,821 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:53:23,599 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:54:31,367 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:54:45,991 - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 22:54:47,212 - INFO - HTTP Request: POST https://os-api.agno.com/telemetry/runs "HTTP/2 201 Created"
+2026-03-11 22:54:47,293 - INFO - [ATW] Fetching stock history from md.eod_bars (source: scrap_level1.py / CSE)
+2026-03-11 22:54:47,484 - INFO - [ATW] Stock history: [{"trade_date":"2026-03-05","close":708.0,"open":null,"high":708.0,"low":700.0,"volume":111544.0,"change_pct":3.36},{"trade_date":"2026-03-04","close":685.0,"open":null,"high":720.0,"low":685.0,"volum...
+2026-03-11 22:54:47,484 - INFO - [ATW] Fetching historical trends from md.historical_prices (source: Investing.com CSVs)
+2026-03-11 22:54:47,516 - INFO - [ATW] Historical trend: {"symbol": "ATW", "timeframe": "weekly", "data_points": 52, "52w_high": 789.9, "52w_low": 630.1, "avg_price": 722.25, "current_vs_52w_high_pct": -11.24, "recent_prices": [{"trade_date": "2026-03-01", ...
+2026-03-11 22:54:47,517 - INFO - [ATW] Fetching MASI index from md.market_index (source: masi_scraper.py / Investing.com)
+2026-03-11 22:54:47,520 - INFO - [ATW] MASI data: [{"trade_date":"2026-03-05","close_price":17351.61,"change_pct":4.18},{"trade_date":"2026-03-04","close_price":16655.58,"change_pct":1.56},{"trade_date":"2026-03-03","close_price":16399.25,"change_pct...
+2026-03-11 22:54:47,521 - INFO - [ATW] Fetching orderbook from md.order_books (source: scrap_level2.py / Medias24)
+2026-03-11 22:54:47,540 - INFO - [ATW] Orderbook: {"error": "No orderbook data for ATW"}...
+2026-03-11 22:54:47,540 - INFO - [ATW] Fetching news from md.news_articles (source: boursenews + medias24 scrapers)
+2026-03-11 22:54:47,569 - INFO - [ATW] News: [{"title":"Bourse de Casablanca: Le MASI gagne 1,51% et poursuit son redressement","published_date":"Mercredi 11 Mars 2026 - PAR","source_name":"boursenews"},{"title":"Bourse de Casablanca: La correct...
+2026-03-11 22:54:47,569 - INFO - [ATW] Computing technical indicators (SMA, RSI, MACD from md.eod_bars)
+2026-03-11 22:54:47,622 - INFO - [ATW] Technicals: {"symbol": "ATW", "trade_date": "2026-03-05", "close": 708.0, "sma_5": 701.78, "sma_10": 726.58, "rsi": 32.2, "macd": -12.97, "macd_signal": -6.19, "macd_histogram": -6.77, "sma_5_vs_sma_10": "BEARISH", "rsi_signal": "NEUTRAL"}

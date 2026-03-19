@@ -1,0 +1,4 @@
+2026-03-11 16:27:40,955 - INFO - ====== WebDriver manager ======
+2026-03-11 16:27:41,945 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 16:27:42,524 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 16:27:43,037 - INFO - Driver [C:\Users\arhou\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache

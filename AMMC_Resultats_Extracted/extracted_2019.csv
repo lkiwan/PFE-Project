@@ -1,0 +1,9 @@
+ticker,annee,trimestre,norme_comptable,total_actif,capitaux_propres_pg,dettes_financieres_lt,dettes_financieres_ct,tresorerie_nette,creances_clients,chiffre_d_affaires_pnb,resultat_brut_exploitation,resultat_net_pg,cout_du_risque,dotations_amortissements,flux_tresorerie_operationnel,capex,nombre_actions_circulation,dividende_par_action,prix_cloture
+ADH,2019,Annuel,IFRS,27248454111.0,,4467133453.0,1879703867.0,186717934.0,4336823846.0,2142162637.0,,,,78503182.0,105935390.0,7521747555332.0,,,
+ADI,2019,Annuel,IFRS,13563107.0,,,,6517.0,967976908.93,6338783.0,,93112.0,,11830773.65,,-7277.0,,,
+ATW,2019,Annuel,IFRS,5.326017135099257e+17,,,,7942184.0,,23472778.0,11657608.0,5816007.0,-1723565.0,7314637271.0,5170185.0,-166019.0,,13.5,
+CIH,2019,Annuel,IFRS,64.0,-41.0,,,29.0,,2.0,1.0,426.0,219.0,1.0,520.0,-466.0,,14.0,
+IAM,2019,Annuel,IFRS,64851.0,12069.0,,11780.0,-17349.0,5818969.0,36517.0,11460.0,,,3603662.0,,2749.0,,2.0,
+JET,2019,Annuel,IFRS,,,,,-420.13,107199143.41,1147189398.07,1712.21,,,141938752.06,,,,,
+MSA,2019,Annuel,IFRS,5784508.0,,,,1326067.0,29043790.77,2362.0,,1160963.0,,20671435.85,483413898.76,-351176.0,,,
+TAQA,2019,Annuel,IFRS,20399760.0,,,,4749345.43,1678260.0,5124120332.42,,1048725.0,,599221578.61,1400758182.9,,,,

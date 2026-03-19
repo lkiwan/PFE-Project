@@ -1,0 +1,8 @@
+ticker,annee,trimestre,norme_comptable,total_actif,capitaux_propres_pg,dettes_financieres_lt,dettes_financieres_ct,tresorerie_nette,creances_clients,chiffre_d_affaires_pnb,resultat_brut_exploitation,resultat_net_pg,cout_du_risque,dotations_amortissements,flux_tresorerie_operationnel,capex,nombre_actions_circulation,dividende_par_action,prix_cloture
+ADI,2020,Annuel,IFRS,13486707.0,,,,-1003218.52,852005284.79,84302.0,,-437.0,,87056586.7,81920771.74,-397631.0,,,5.0
+ATW,2020,Annuel,IFRS,5.681076515326017e+17,,,,-1884059.0,,23858063.0,12249668.0,3018002.0,-1589044.0,-2183706951.0,5488557.0,-418954.0,,11.0,
+CIH,2020,Annuel,IFRS,75.0,,,,885.0,,2.0,941.0,426.0,249.0,645.0,492.0,378.0,,,
+IAM,2020,Annuel,IFRS,63540.0,1431.0,,9381.0,-13872.0,1230214.0,36517.0,18922.0,5.0,,3603662.0,9983323.0,2749.0,,2.0,
+JET,2020,Annuel,IFRS,2724419613.14,,,,104991189.59,1987405704.37,1242.09,2020.0,,,172983341.02,7240879.01,330387.67,,,
+MSA,2020,Annuel,IFRS,6.0,,,,12473.0,65375.0,2909381.0,,671.0,,16345.0,95891.0,66270.0,,,
+TAQA,2020,Annuel,IFRS,19248153.0,,,,281923431566.0,2251954.12,4233438871.17,,1054189.0,,609887884.41,4235000000.0,,,,
